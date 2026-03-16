@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StockView Pro</title>
+  <title>Stock View | Sit Healthier</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <style>
@@ -16,15 +16,13 @@
       --border: #1f2e45;
       --border2: #243354;
       --accent: #00d4ff;
-      --accent2: #0099cc;
       --accent3: #00ffaa;
-      --accent4: #ff6b35;
       --text: #e8f0fe;
       --text2: #8ba3c7;
       --text3: #4a6285;
       --green: #00e676;
       --yellow: #ffd740;
-      --red: #ff5252;
+      --red: #ff5252
     }
 
     * {
@@ -79,13 +77,11 @@
       }
     }
 
-    /* ── Header ── */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      position: relative;
-      background: rgba(8, 12, 20, .92);
+      background: rgba(8, 12, 20, .95);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
       padding: 0 32px
@@ -96,36 +92,33 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      gap: 20px;
-      height: 68px
+      gap: 16px;
+      height: 64px
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-      text-decoration: none
+      gap: 10px;
+      flex-shrink: 0
     }
 
     .logo-icon {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       background: linear-gradient(135deg, var(--accent), var(--accent3));
-      border-radius: 10px;
+      border-radius: 9px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 900;
-      letter-spacing: -.5px;
       color: #000;
-      box-shadow: 0 0 20px rgba(0, 212, 255, .3);
-      font-family: 'Poppins', sans-serif
+      box-shadow: 0 0 18px rgba(0, 212, 255, .3)
     }
 
     .logo-text {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       background: linear-gradient(90deg, var(--accent), var(--accent3));
       -webkit-background-clip: text;
@@ -135,17 +128,17 @@
 
     .search-wrap {
       flex: 1;
-      max-width: 560px;
+      max-width: 480px;
       position: relative
     }
 
     .search-icon {
       position: absolute;
-      left: 14px;
+      left: 13px;
       top: 50%;
       transform: translateY(-50%);
       color: var(--text3);
-      font-size: 15px;
+      font-size: 14px;
       pointer-events: none
     }
 
@@ -153,13 +146,13 @@
       width: 100%;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 10px 40px 10px 42px;
+      border-radius: 10px;
+      padding: 9px 36px 9px 38px;
       color: var(--text);
       font-family: 'Poppins', sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       outline: none;
-      transition: border-color .2s, box-shadow .2s, background .2s
+      transition: border-color .2s, box-shadow .2s
     }
 
     #searchInput::placeholder {
@@ -168,39 +161,33 @@
 
     #searchInput:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(0, 212, 255, .1);
-      background: var(--surface3)
+      box-shadow: 0 0 0 3px rgba(0, 212, 255, .1)
     }
 
     .search-clear {
       position: absolute;
-      right: 12px;
+      right: 10px;
       top: 50%;
       transform: translateY(-50%);
       background: none;
       border: none;
       color: var(--text3);
       cursor: pointer;
-      font-size: 15px;
+      font-size: 14px;
       display: none;
       padding: 4px;
-      border-radius: 4px;
-      transition: color .2s;
-      align-items: center
-    }
-
-    .search-clear:hover {
-      color: var(--text)
+      border-radius: 4px
     }
 
     .search-clear.vis {
-      display: flex
+      display: flex;
+      align-items: center
     }
 
     .header-right {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       margin-left: auto;
       flex-shrink: 0
     }
@@ -208,18 +195,18 @@
     .stat-pill {
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 6px;
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 6px 14px;
-      font-size: 12px;
+      padding: 5px 12px;
+      font-size: 11px;
       white-space: nowrap
     }
 
     .stat-dot {
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--accent3);
       animation: pulse 2s ease-in-out infinite
@@ -243,9 +230,36 @@
       }
     }
 
+    .hdr-btn {
+      height: 32px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text2);
+      cursor: pointer;
+      font-size: 11px;
+      font-family: 'Poppins', sans-serif;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all .2s;
+      white-space: nowrap
+    }
+
+    .hdr-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent)
+    }
+
+    .hdr-btn.connected {
+      border-color: var(--green);
+      color: var(--green)
+    }
+
     .refresh-btn {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: 8px;
@@ -255,8 +269,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all .2s;
-      flex-shrink: 0
+      transition: all .2s
     }
 
     .refresh-btn:hover {
@@ -264,13 +277,8 @@
       color: var(--accent)
     }
 
-    .refresh-btn.spinning svg,
     .refresh-btn.spinning .spin-icon {
       animation: spin .8s linear infinite
-    }
-
-    .refresh-btn.spinning {
-      animation: none
     }
 
     @keyframes spin {
@@ -279,43 +287,70 @@
       }
     }
 
-    /* ── Filters ── */
-    .filter-section {
+    #apiPanel {
+      display: none;
+      position: absolute;
+      top: 64px;
+      right: 32px;
+      z-index: 200;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 14px;
+      padding: 16px 18px;
+      width: 460px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, .5)
+    }
+
+    .filter-bar {
       max-width: 1600px;
       margin: 0 auto;
-      padding: 16px 32px;
+      padding: 12px 32px;
       position: relative;
       z-index: 1;
       display: flex;
       align-items: center;
-      gap: 12px;
-      flex-wrap: wrap
+      gap: 10px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border)
     }
 
-    .filter-label {
-      font-size: 11px;
-      color: var(--text3);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px
-    }
-
-    .filter-chips {
+    .filter-group {
       display: flex;
+      align-items: center;
       gap: 8px;
       flex-wrap: wrap
     }
 
+    .filter-sep {
+      width: 1px;
+      height: 20px;
+      background: var(--border2);
+      flex-shrink: 0
+    }
+
+    .filter-lbl {
+      font-size: 10px;
+      color: var(--text3);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      white-space: nowrap
+    }
+
     .chip {
-      padding: 5px 14px;
+      padding: 4px 12px;
       border-radius: 20px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
       cursor: pointer;
       border: 1px solid var(--border);
       background: var(--surface);
       color: var(--text2);
-      transition: all .2s
+      transition: all .2s;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 5px
     }
 
     .chip:hover {
@@ -329,37 +364,64 @@
       color: var(--accent)
     }
 
-    .results-count {
+    .results-info {
       margin-left: auto;
-      font-size: 12px;
-      color: var(--text3)
+      font-size: 11px;
+      color: var(--text3);
+      display: flex;
+      align-items: center;
+      gap: 12px
     }
 
-    .results-count span {
+    .results-info b {
       color: var(--accent);
       font-weight: 600
     }
 
-    /* ── Grid ── */
+    .view-toggle {
+      display: flex;
+      gap: 4px
+    }
+
+    .view-btn {
+      width: 28px;
+      height: 28px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      transition: all .2s
+    }
+
+    .view-btn.active {
+      background: rgba(0, 212, 255, .1);
+      border-color: var(--accent);
+      color: var(--accent)
+    }
+
     .grid-section {
       max-width: 1600px;
       margin: 0 auto;
-      padding: 0 32px 60px;
+      padding: 20px 32px 60px;
       position: relative;
       z-index: 1
     }
 
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 18px
     }
 
-    /* ── Card ── */
     .product-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
       cursor: pointer;
       transition: transform .25s, border-color .25s, box-shadow .25s;
@@ -370,7 +432,7 @@
     @keyframes cardIn {
       from {
         opacity: 0;
-        transform: translateY(20px) scale(.97)
+        transform: translateY(16px) scale(.97)
       }
 
       to {
@@ -380,9 +442,9 @@
     }
 
     .product-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       border-color: var(--border2);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, .4), 0 0 0 1px rgba(0, 212, 255, .1)
+      box-shadow: 0 10px 36px rgba(0, 0, 0, .4), 0 0 0 1px rgba(0, 212, 255, .08)
     }
 
     .product-card::before {
@@ -402,23 +464,23 @@
     }
 
     .card-header {
-      padding: 16px 16px 10px;
+      padding: 14px 14px 8px;
       display: flex;
       align-items: flex-start;
-      gap: 12px
+      gap: 10px
     }
 
     .card-image {
-      width: 64px;
-      height: 64px;
-      border-radius: 10px;
+      width: 56px;
+      height: 56px;
+      border-radius: 9px;
       background: var(--surface2);
       border: 1px solid var(--border);
       flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 26px;
+      font-size: 22px;
       overflow: hidden
     }
 
@@ -434,16 +496,16 @@
     }
 
     .card-sku {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       color: var(--accent);
       letter-spacing: .5px;
       text-transform: uppercase;
-      margin-bottom: 3px
+      margin-bottom: 2px
     }
 
     .card-name {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
       color: var(--text);
       line-height: 1.4;
@@ -451,35 +513,27 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      margin-bottom: 5px
+      margin-bottom: 4px
     }
 
     .card-meta {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap
     }
 
     .color-badge {
       display: flex;
       align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      color: var(--text2);
-      font-weight: 500
-    }
-
-    .color-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, .2)
+      gap: 4px;
+      font-size: 10px;
+      color: var(--text2)
     }
 
     .model-badge {
-      font-size: 10px;
-      padding: 2px 8px;
+      font-size: 9px;
+      padding: 2px 7px;
       background: rgba(255, 255, 255, .05);
       border-radius: 20px;
       color: var(--text3);
@@ -487,7 +541,7 @@
     }
 
     .card-body {
-      padding: 0 16px 16px
+      padding: 0 14px 14px
     }
 
     .stock-row {
@@ -495,14 +549,14 @@
       align-items: center;
       justify-content: space-between;
       background: var(--surface2);
-      border-radius: 10px;
-      padding: 10px 14px;
-      margin-bottom: 10px;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 8px;
       border: 1px solid var(--border)
     }
 
     .stock-label {
-      font-size: 10px;
+      font-size: 9px;
       color: var(--text3);
       font-weight: 600;
       text-transform: uppercase;
@@ -514,8 +568,8 @@
       background: var(--border);
       border-radius: 2px;
       overflow: hidden;
-      margin-top: 5px;
-      width: 80px
+      margin-top: 4px;
+      width: 70px
     }
 
     .stock-bar {
@@ -525,7 +579,7 @@
     }
 
     .stock-value {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
       line-height: 1
     }
@@ -548,8 +602,9 @@
 
     .deliveries-preview {
       display: flex;
-      gap: 6px;
-      flex-wrap: wrap
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 6px
     }
 
     .delivery-chip {
@@ -558,61 +613,198 @@
       align-items: center;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 5px 8px;
-      min-width: 54px
+      border-radius: 7px;
+      padding: 4px 7px;
+      min-width: 50px
     }
 
     .delivery-month {
-      font-size: 9px;
+      font-size: 8px;
       color: var(--text3);
       font-weight: 600;
       text-transform: uppercase
     }
 
     .delivery-qty {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       color: var(--accent3);
-      margin-top: 2px
+      margin-top: 1px
     }
 
     .no-delivery {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--text3);
       font-style: italic
     }
 
-    /* ── Skeleton ── */
-    .skeleton {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      animation: shimmer 1.5s infinite
-    }
-
-    @keyframes shimmer {
-      0% {
-        opacity: 1
-      }
-
-      50% {
-        opacity: .5
-      }
-
-      100% {
-        opacity: 1
-      }
-    }
-
-    .skel-line {
-      background: var(--surface3);
+    .card-note {
+      margin-top: 6px;
+      padding: 6px 8px;
+      background: rgba(255, 215, 64, .05);
+      border: 1px solid rgba(255, 215, 64, .15);
       border-radius: 6px;
-      margin-bottom: 10px
+      font-size: 10px;
+      color: var(--text2);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden
     }
 
-    /* ── Empty ── */
+    .table-section {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 20px 32px 60px;
+      position: relative;
+      z-index: 1;
+      display: none
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border)
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px
+    }
+
+    thead th {
+      background: var(--surface2);
+      color: var(--text3);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      transition: color .2s
+    }
+
+    thead th:hover {
+      color: var(--accent)
+    }
+
+    thead th.sorted {
+      color: var(--accent)
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background .15s;
+      cursor: pointer;
+      animation: rowIn .3s ease both
+    }
+
+    @keyframes rowIn {
+      from {
+        opacity: 0;
+        transform: translateX(-6px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    tbody tr:hover {
+      background: var(--surface2)
+    }
+
+    tbody tr:last-child {
+      border-bottom: none
+    }
+
+    td {
+      padding: 10px 14px;
+      color: var(--text2);
+      vertical-align: middle
+    }
+
+    td.sku-cell {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: .3px;
+      white-space: nowrap
+    }
+
+    td.name-cell .pname {
+      color: var(--text);
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      max-width: 220px
+    }
+
+    td.stock-cell {
+      font-size: 15px;
+      font-weight: 800;
+      white-space: nowrap
+    }
+
+    .tbl-color {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap
+    }
+
+    .tbl-deliveries {
+      display: flex;
+      gap: 4px;
+      flex-wrap: nowrap
+    }
+
+    .tbl-del-chip {
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 2px 6px;
+      font-size: 9px;
+      color: var(--accent3);
+      white-space: nowrap
+    }
+
+    .tbl-note {
+      max-width: 160px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 11px;
+      color: var(--yellow);
+      opacity: .8
+    }
+
+    .view-detail-btn {
+      padding: 4px 10px;
+      background: rgba(0, 212, 255, .08);
+      border: 1px solid rgba(0, 212, 255, .2);
+      border-radius: 6px;
+      color: var(--accent);
+      font-size: 10px;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      transition: all .2s;
+      white-space: nowrap
+    }
+
+    .view-detail-btn:hover {
+      background: rgba(0, 212, 255, .15)
+    }
+
     .empty-state {
       grid-column: 1/-1;
       text-align: center;
@@ -621,18 +813,17 @@
     }
 
     .empty-icon {
-      font-size: 48px;
-      margin-bottom: 16px
+      font-size: 44px;
+      margin-bottom: 14px
     }
 
     .empty-title {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       color: var(--text2);
-      margin-bottom: 8px
+      margin-bottom: 6px
     }
 
-    /* ── Modal ── */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -656,12 +847,12 @@
     .modal {
       background: var(--surface);
       border: 1px solid var(--border2);
-      border-radius: 20px;
+      border-radius: 18px;
       width: 100%;
-      max-width: 680px;
+      max-width: 700px;
       max-height: 90vh;
       overflow-y: auto;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, .6), 0 0 0 1px rgba(0, 212, 255, .1);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .6);
       transform: scale(.93) translateY(20px);
       transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), opacity .3s;
       opacity: 0;
@@ -675,27 +866,27 @@
     }
 
     .modal-header {
-      padding: 24px 24px 16px;
+      padding: 22px 22px 14px;
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       background: var(--surface);
       z-index: 10;
-      border-radius: 20px 20px 0 0
+      border-radius: 18px 18px 0 0
     }
 
     .modal-close {
       position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
+      top: 14px;
+      right: 14px;
+      width: 30px;
+      height: 30px;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 7px;
       color: var(--text2);
       cursor: pointer;
-      font-size: 16px;
+      font-size: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -708,37 +899,37 @@
     }
 
     .modal-sku {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       color: var(--accent);
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin-bottom: 6px
+      margin-bottom: 5px
     }
 
     .modal-name {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       line-height: 1.3;
-      padding-right: 40px;
-      margin-bottom: 10px
+      padding-right: 36px;
+      margin-bottom: 8px
     }
 
     .modal-tags {
       display: flex;
-      gap: 8px;
+      gap: 7px;
       flex-wrap: wrap
     }
 
     .tag {
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: 20px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
       border: 1px solid;
       display: inline-flex;
       align-items: center;
-      gap: 5px
+      gap: 4px
     }
 
     .tag-model {
@@ -760,54 +951,54 @@
     }
 
     .modal-body {
-      padding: 20px 24px 24px
+      padding: 18px 22px 22px
     }
 
     .info-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 20px
+      gap: 10px;
+      margin-bottom: 18px
     }
 
     .info-card {
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 16px
+      border-radius: 10px;
+      padding: 12px 14px
     }
 
     .info-card-label {
-      font-size: 10px;
+      font-size: 9px;
       color: var(--text3);
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: .8px;
-      margin-bottom: 6px
+      margin-bottom: 5px
     }
 
     .info-card-value {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 800;
       line-height: 1
     }
 
     .info-card-sub {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--text3);
-      margin-top: 4px
+      margin-top: 3px
     }
 
     .section-title {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       color: var(--text3);
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
-      gap: 8px
+      gap: 7px
     }
 
     .section-title::after {
@@ -819,19 +1010,18 @@
 
     .deliveries-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-      gap: 10px;
-      margin-bottom: 20px
+      grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+      gap: 8px;
+      margin-bottom: 18px
     }
 
     .delivery-card {
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 10px 12px;
+      border-radius: 9px;
+      padding: 9px 10px;
       text-align: center;
-      transition: border-color .2s, transform .2s;
-      animation: fadeUp .4s ease both
+      transition: border-color .2s, transform .2s
     }
 
     .delivery-card:hover {
@@ -839,29 +1029,17 @@
       transform: translateY(-2px)
     }
 
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(8px)
-      }
-
-      to {
-        opacity: 1;
-        transform: none
-      }
-    }
-
     .delivery-card-month {
-      font-size: 10px;
+      font-size: 9px;
       color: var(--text3);
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: .5px;
-      margin-bottom: 4px
+      margin-bottom: 3px
     }
 
     .delivery-card-qty {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 800;
       color: var(--accent3)
     }
@@ -869,15 +1047,14 @@
     .details-list {
       display: flex;
       flex-direction: column;
-      gap: 0;
-      margin-bottom: 20px
+      margin-bottom: 18px
     }
 
     .detail-row {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
-      padding: 9px 0;
+      gap: 10px;
+      padding: 8px 0;
       border-bottom: 1px solid var(--border)
     }
 
@@ -886,16 +1063,16 @@
     }
 
     .detail-key {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--text3);
       font-weight: 600;
-      min-width: 110px;
+      min-width: 100px;
       flex-shrink: 0;
       padding-top: 1px
     }
 
     .detail-val {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--text2);
       word-break: break-all;
       flex: 1
@@ -910,40 +1087,81 @@
       text-decoration: underline
     }
 
-    .notes-box {
-      background: rgba(255, 215, 64, .06);
-      border: 1px solid rgba(255, 215, 64, .2);
-      border-radius: 10px;
-      padding: 12px 14px;
-      font-size: 12px;
-      color: var(--text2);
-      line-height: 1.6
+    .note-editor {
+      margin-bottom: 18px
     }
 
-    /* ── Last updated bar ── */
-    .last-updated {
-      max-width: 1600px;
-      margin: 0 auto;
-      padding: 0 32px 6px;
-      font-size: 11px;
-      color: var(--text3);
-      position: relative;
-      z-index: 1;
+    .note-textarea {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 10px 12px;
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      line-height: 1.6;
+      resize: vertical;
+      min-height: 80px;
+      outline: none;
+      transition: border-color .2s
+    }
+
+    .note-textarea:focus {
+      border-color: var(--accent)
+    }
+
+    .note-actions {
       display: flex;
       align-items: center;
-      gap: 8px
+      gap: 8px;
+      margin-top: 8px
     }
 
-    /* ── Toast ── */
+    .btn-save-note {
+      padding: 6px 16px;
+      background: var(--accent);
+      border: none;
+      border-radius: 7px;
+      color: #000;
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity .2s
+    }
+
+    .btn-save-note:hover {
+      opacity: .85
+    }
+
+    .btn-save-note:disabled {
+      opacity: .4;
+      cursor: not-allowed
+    }
+
+    .note-status {
+      font-size: 10px;
+      color: var(--text3)
+    }
+
+    .note-status.ok {
+      color: var(--green)
+    }
+
+    .note-status.err {
+      color: var(--red)
+    }
+
     .toast {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
+      bottom: 22px;
+      right: 22px;
       background: var(--surface2);
       border: 1px solid var(--border2);
-      border-radius: 12px;
-      padding: 12px 18px;
-      font-size: 13px;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 12px;
       color: var(--text);
       box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
       z-index: 2000;
@@ -952,7 +1170,7 @@
       transition: all .35s cubic-bezier(.34, 1.56, .64, 1);
       display: flex;
       align-items: center;
-      gap: 10px
+      gap: 8px
     }
 
     .toast.show {
@@ -962,19 +1180,14 @@
 
     @media(max-width:768px) {
       header {
-        padding: 0 16px
+        padding: 0 14px
       }
 
-      .header-right .stat-pill {
-        display: none
-      }
-
-      .api-banner,
-      .filter-section,
+      .filter-bar,
       .grid-section,
-      .last-updated {
-        padding-left: 16px;
-        padding-right: 16px
+      .table-section {
+        padding-left: 14px;
+        padding-right: 14px
       }
 
       .products-grid {
@@ -986,10 +1199,19 @@
       }
 
       .modal {
-        border-radius: 16px
+        border-radius: 14px
       }
 
       .logo-text {
+        display: none
+      }
+
+      #apiPanel {
+        width: calc(100vw - 28px);
+        right: 14px
+      }
+
+      .header-right .stat-pill {
         display: none
       }
     }
@@ -997,7 +1219,6 @@
 </head>
 
 <body>
-
   <header>
     <div class="header-inner">
       <div class="logo">
@@ -1006,51 +1227,90 @@
       </div>
       <div class="search-wrap">
         <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" placeholder="Search SKU, product name, color, model…" autocomplete="off">
+        <input type="text" id="searchInput" placeholder="Search SKU, name, color, model…" autocomplete="off">
         <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
       </div>
       <div class="header-right">
         <div class="stat-pill">
-          <div class="stat-dot" id="statDot"></div><span id="totalCount">—</span> Products
+          <div class="stat-dot" id="statDot"></div>
+          <span id="totalCount">—</span> Products
         </div>
-        <button class="btn btn-outline btn-sm" id="apiConnectBtn" onclick="toggleApiPanel()"
-          title="Connect Google Sheets API" style="padding:6px 12px;font-size:11px;border-radius:8px; cursor: pointer;">API</button>
-        <button class="refresh-btn" id="refreshBtn" onclick="loadData(true)" title="Refresh data"><span
-            class="spin-icon" style="display:inline-block;font-size:16px;line-height:1">↻</span></button>
+        <button class="hdr-btn" id="apiConnectBtn" onclick="toggleApiPanel()"> API</button>
+        <button class="refresh-btn" id="refreshBtn" onclick="loadData(true)" title="Refresh">
+          <span class="spin-icon" style="display:inline-block;font-size:15px;line-height:1">↻</span>
+        </button>
       </div>
-      <!-- Slide-down API panel -->
-      <div id="apiPanel"
-        style="display:none;position:absolute;top:68px;right:32px;z-index:200;background:var(--surface);border:1px solid var(--border2);border-radius:14px;padding:18px 20px;width:480px;box-shadow:0 16px 48px rgba(0,0,0,.5);animation:fadeUp .25s ease">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-          <div class="api-dot loading" id="apiDot" style="width:8px;height:8px;border-radius:50%"></div>
-          <span id="apiStatusText" style="font-size:12px;font-weight:600;color:var(--text2)">Not connected</span>
+      <div id="apiPanel">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+          <div id="apiDot" style="width:8px;height:8px;border-radius:50%;background:var(--text3);flex-shrink:0"></div>
+          <span id="apiStatusText" style="font-size:11px;font-weight:600;color:var(--text2)">Not connected</span>
           <button onclick="toggleApiPanel()"
-            style="margin-left:auto;background:none;border:none;color:var(--text3);cursor:pointer;font-size:16px;line-height:1">✕</button>
+            style="margin-left:auto;background:none;border:none;color:var(--text3);cursor:pointer;font-size:15px;line-height:1">✕</button>
         </div>
-        <div style="display:flex;gap:8px;margin-bottom:10px">
+        <div style="display:flex;gap:7px">
           <input type="text" id="apiUrlInput" placeholder="Paste Apps Script Web App URL…" autocomplete="off"
-            style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 12px;color:var(--text);font-family:'Poppins',sans-serif;font-size:12px;outline:none">
-          <button class="btn btn-accent btn-sm" onclick="saveApiUrl()">Connect</button>
+            style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:7px;padding:7px 10px;color:var(--text);font-family:'Poppins',sans-serif;font-size:11px;outline:none">
+          <button onclick="saveApiUrl()"
+            style="padding:7px 14px;background:var(--accent);border:none;border-radius:7px;color:#000;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;cursor:pointer">Connect</button>
         </div>
-
+        <!-- <div style="margin-top:8px;font-size:10px;color:var(--text3)">Note editing requires write permission in Apps -->
+        <!-- Script.</div> -->
       </div>
     </div>
   </header>
 
-  <div class="filter-section">
-    <span class="filter-label">Filter</span>
-    <div class="filter-chips" id="filterChips">
-      <div class="chip active" data-filter="all" onclick="setFilter('all',this)">All</div>
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-group" id="modelChips">
+      <span class="filter-lbl">Model</span>
+      <div class="chip active" onclick="setModel('all',this)">All</div>
     </div>
-    <div class="results-count"><span id="visibleCount">0</span> results</div>
+    <div class="filter-sep" id="colorSep" style="display:none"></div>
+    <div class="filter-group" id="colorChips" style="display:none">
+      <span class="filter-lbl">Color</span>
+    </div>
+    <div class="filter-sep"></div>
+    <div class="filter-group" id="stockChips">
+      <span class="filter-lbl">Stock</span>
+      <div class="chip active" onclick="setStock('all',this)">All</div>
+      <div class="chip" onclick="setStock('in',this)">In Stock</div>
+      <div class="chip" onclick="setStock('out',this)">Out of Stock</div>
+    </div>
+    <div class="results-info">
+      <b id="visibleCount">0</b> results
+      <div class="view-toggle">
+        <button class="view-btn active" id="gridViewBtn" onclick="setView('grid')" title="Grid view">⊞</button>
+        <button class="view-btn" id="tableViewBtn" onclick="setView('table')" title="Table view">☰</button>
+      </div>
+    </div>
   </div>
 
-  <div class="grid-section">
+  <div class="grid-section" id="gridSection">
     <div class="products-grid" id="productsGrid"></div>
   </div>
 
+  <div class="table-section" id="tableSection">
+    <div class="table-wrap">
+      <table id="productsTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable('sku')">SKU <span>↕</span></th>
+            <th onclick="sortTable('productName')">Product Name <span>↕</span></th>
+            <th onclick="sortTable('color')">Color <span>↕</span></th>
+            <th onclick="sortTable('model')">Model <span>↕</span></th>
+            <th onclick="sortTable('stockInHand')">Stock <span>↕</span></th>
+            <!-- <th onclick="sortTable('inventoryStock')">Inventory <span>↕</span></th> -->
+            <th>Deliveries</th>
+            <th>Notes</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
-    <div class="modal" id="modal">
+    <div class="modal">
       <div class="modal-header">
         <div class="modal-sku" id="mSku"></div>
         <div class="modal-name" id="mName"></div>
@@ -1060,315 +1320,179 @@
       <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
-
   <div class="toast" id="toast"></div>
 
   <script>
-    // ─── State ───────────────────────────────────────────────────────────────────
-    let PRODUCTS = [];
-    let INVENTORY = {};
-    let activeFilter = 'all';
-    let searchQuery = '';
-    let apiUrl = localStorage.getItem('stockview_api_url') || '';
-    let autoRefreshTimer = null;
+    let PRODUCTS = [], INVENTORY = {}, activeModel = 'all', activeColor = 'all', activeStock = 'all', searchQuery = '', currentView = 'grid', sortCol = null, sortDir = 1, autoRefreshTimer = null, apiUrl = localStorage.getItem('stockview_api_url') || '';
 
-    // Fallback offline data
-    const FALLBACK_PRODUCTS = [{ "sku": "N4-057-BLK", "stockInHand": 120, "inventoryStock": 120, "model": "57", "color": "Black", "productName": "Hydraulic Saddle Rolling Ergonomic Medical Stool", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat?variant=39333773115503", "notes": "standard chair", "owdId": "811585.0", "upcoming": "", "deliveries": { "Jan-26": "135(5)", "Dec": "82(0)", "Sept-25": "60.0", "Jul-25": "56.0", "Jun-25": "15.0", "May-25": "15.0", "Sept-24": "175.0", "Dec-24": "95.0" }, "sheetName": "057 - Black", "sourceFile": "057.xlsx" }, { "sku": "N4-057-2PCS-BLK", "stockInHand": 2, "inventoryStock": 2, "model": "57", "color": "Black", "productName": "Hydraulic Saddle Rolling Ergonomic Medical Stool", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat?variant=39333773115503", "notes": "2 pcs of 057 in one box", "owdId": "811586.0", "upcoming": "", "deliveries": { "Jul-25": "15.0", "May-25": "10.0", "Sept-24": "20.0", "Dec-24": "20.0" }, "sheetName": "057 - Black", "sourceFile": "057.xlsx" }, { "sku": "N4-057-BLK-FOOT", "stockInHand": 7, "inventoryStock": 7, "model": "57", "color": "Black", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat & FootRest", "manufacturer": "Sit 2 Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat-footring?pr_prod_strat=e5_desc&pr_rec_id=67952dbf1&pr_rec_pid=6572760399983&pr_ref_pid=6572740837487&pr_seq=uniform&variant=39333821481071", "notes": "057 with Footrest", "owdId": "811593.0", "upcoming": "", "deliveries": { "Jan-26": "20(0)", "Jul-25": "10.0", "Jun-25": "15.0" }, "sheetName": "057 - Black", "sourceFile": "057.xlsx" }, { "sku": "N3-057-BLACK-NO-CYLD", "stockInHand": 39, "inventoryStock": 39, "model": "57", "color": "Black", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat & FootRest", "manufacturer": "", "imageUrl": "", "productUrl": "https://www.sithealthier.com/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat-footring?pr_prod_strat=e5_desc&pr_rec_id=67952dbf1&pr_rec_pid=6572760399983&pr_ref_pid=6572740837487&pr_seq=uniform&variant=39333821481071", "notes": "057 w/out cylinder", "owdId": "", "upcoming": "", "deliveries": { "Jan-26": "40(0)" }, "sheetName": "057 - Black", "sourceFile": "057.xlsx" }, { "sku": "LEGEND: Number inside parenthesis indicates stocks onhand when PO was ordered", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "057 - Black", "sourceFile": "057.xlsx" }, { "sku": "N4-057-PURPLE", "stockInHand": 48, "inventoryStock": 48, "model": "57", "color": "Purple", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/sh-drll506-englishviolet-drll?variant=50207861510", "notes": "standard chair", "owdId": "811594.0", "upcoming": "", "deliveries": { "Jan-25": "30(23)", "Jul-25": "15.0", "Jun-25": "35.0", "May-25": "35.0", "Sept-24": "40.0", "Dec-24": "25.0" }, "sheetName": "057-Purple", "sourceFile": "057.xlsx" }, { "sku": "N4-057-PURPLE-FOOT", "stockInHand": 16, "inventoryStock": 16, "model": "57", "color": "Purple", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat & FootRest", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat-footring?pr_prod_strat=e5_desc&pr_rec_id=67952dbf1&pr_rec_pid=6572760399983&pr_ref_pid=6572740837487&pr_seq=uniform&variant=39333821481071", "notes": "Dark Purple with Footrest", "owdId": "828353.0", "upcoming": "", "deliveries": { "Jul-25": "10.0", "Jun-25": "5.0", "May-25": "5.0" }, "sheetName": "057-Purple", "sourceFile": "057.xlsx" }, { "sku": "LEGEND: Number inside parenthesis indicates stocks onhand when PO was ordered", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "057-Purple", "sourceFile": "057.xlsx" }, { "sku": "N4-057-RUST-ORNG", "stockInHand": 20, "inventoryStock": 20, "model": "57", "color": "Rust Orange", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat?variant=39333773115503", "notes": "standard chair", "owdId": "811588.0", "upcoming": "", "deliveries": { "Jan-26": "30(10)", "Jul-25": "40.0", "Jun-25": "45.0", "May-25": "45.0", "Sept-24": "50.0", "Dec-24": "10.0" }, "sheetName": "057-Rust Orange", "sourceFile": "057.xlsx" }, { "sku": "N4-057-RUST-ORNG-FOOT", "stockInHand": 34, "inventoryStock": 34, "model": "57", "color": "Rust Orange", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat & FootRest", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat-footring?pr_prod_strat=e5_desc&pr_rec_id=67952dbf1&pr_rec_pid=6572760399983&pr_ref_pid=6572740837487&pr_seq=uniform&variant=39333821481071", "notes": "with footrest", "owdId": "827953.0", "upcoming": "", "deliveries": { "Jul-25": "15.0", "Jun-25": "5.0", "May-25": "5.0" }, "sheetName": "057-Rust Orange", "sourceFile": "057.xlsx" }, { "sku": "LEGEND: Number inside parenthesis indicates stocks onhand when PO was ordered", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "057-Rust Orange", "sourceFile": "057.xlsx" }, { "sku": "N4-057-VANILLA", "stockInHand": 19, "inventoryStock": 19, "model": "57", "color": "Vanilla", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat?pr_prod_strat=e5_desc&pr_rec_id=b2de10003&pr_rec_pid=6572740837487&pr_ref_pid=6572760399983&pr_seq=uniform&variant=39333773115503", "notes": "standard chair", "owdId": "811595.0", "upcoming": "", "deliveries": { "Jan-25": "25(0)", "Dec-25": "15(0)", "Jul-25": "10.0", "Jun-25": "5.0", "May-25": "5.0", "Sept-24": "15.0" }, "sheetName": "057-Vanilla", "sourceFile": "057.xlsx" }, { "sku": "LEGEND: Number inside parenthesis indicates stocks onhand when PO was ordered", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "057-Vanilla", "sourceFile": "057.xlsx" }, { "sku": "N-057-SMALL-PURPLE", "stockInHand": 28, "inventoryStock": 28, "model": "57", "color": "Puple", "productName": "Small Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat - Purple", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat?variant=39333773115503", "notes": "SMALL SADDLE SHAPE", "owdId": "811589", "upcoming": "", "deliveries": { "Jul-25": "20.0", "Sept-24": "15.0", "Dec-24": "15.0" }, "sheetName": "057-Small", "sourceFile": "057.xlsx" }, { "sku": "N-057-SMALL-BLK", "stockInHand": 8, "inventoryStock": 8, "model": "57", "color": "Black", "productName": "Small Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat - Black", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat?variant=39333773115503", "notes": "SMALL SADDLE SHAPE", "owdId": "811596", "upcoming": "", "deliveries": { "Jul-25": "15.0", "Jun-25": "5.0", "Sept-24": "15.0", "Dec-24": "15.0" }, "sheetName": "057-Small", "sourceFile": "057.xlsx" }, { "sku": "N-057-SMALL-RSTORNGE", "stockInHand": 0, "inventoryStock": 0, "model": "57", "color": "Rust Orange", "productName": "Small Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat - Black", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/hydraulic-saddle-shape-rolling-stool-with-tilt-able-seat?variant=39333773115503", "notes": "SMALL SADDLE SHAPE", "owdId": "840618", "upcoming": "", "deliveries": {}, "sheetName": "057-Small", "sourceFile": "057.xlsx" }, { "sku": "N-019-BLK", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Old Model", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-BLK-NO-CYLD", "stockInHand": 39, "inventoryStock": 39, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "No Cylinder", "owdId": "825878.0", "upcoming": "", "deliveries": { "Jan-26": "40(0)", "July-25": "20.0", "June-25": "5.0", "Sept-24": "20.0" }, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-BLK", "stockInHand": 31, "inventoryStock": 28, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "New model", "owdId": "775790.0", "upcoming": "", "deliveries": { "Jan-26": "40(0)", "July-25": "51.0", "Sept-24": "20.0", "Nov-23": "1.0" }, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-BLK-SHORT", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Old model", "owdId": "742404.0", "upcoming": "", "deliveries": { "Sept-24": "10.0" }, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-BLK-SHORT-NO-CSTR", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Short cylinder with no wheels", "owdId": "763149.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "SHHGA019BLK16", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Old Model", "owdId": "744651.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-BLK-NO-WHL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "019 no wheel included", "owdId": "775791.0", "upcoming": "", "deliveries": { "Nov-23": "25.0" }, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-BLK-Tall", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "019 with tall cylinder", "owdId": "742405.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "019-BLACK-TALL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "019 with tall cylinder", "owdId": "744652.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-BLK-Metal-Base", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Black with Metal base", "owdId": "759999.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N2-024-BLK-METAL-BASE", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Ergonomic Comfortable Saddle Style Chair With Footrest & Backrest", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Black with Metal base", "owdId": "775792.0", "upcoming": "", "deliveries": { "Nov-23": "25.0" }, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-020-BLK-FOOT-NYLB", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "", "owdId": "742406.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-020-BLK-SHORT-FOOT-NYLB", "stockInHand": 1, "inventoryStock": 1, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "short cylinder, footrest , nylon base", "owdId": "742407.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-020-BLK-TALL-FOOT-NYLB", "stockInHand": 1, "inventoryStock": 1, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "tall cylinder, footrest, nylon base", "owdId": "742408.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-020-BLK-TALL-FOOT-NYLB-INLINE", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "", "owdId": "742408.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "SHHG021BLK", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Finish this First before you use N2-24", "owdId": "744668.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-021-BLK-FOOT-CRMB", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Ergonomic Comfortable Saddle Style Chair With Footrest & Backrest", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Finish this First before you use N2-24", "owdId": "742409.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-021-BLK-SHORT-FOOT-CRMB", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Ergonomic Comfortable Saddle Style Chair With Footrest & Backrest", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "short cylinder, footrest, chrome base", "owdId": "742410.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-021-BLK-TALL-FOOT-CRMB", "stockInHand": 20, "inventoryStock": 20, "model": "19", "color": "Black", "productName": "Ergonomic Comfortable Saddle Style Chair With Footrest & Backrest", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "tall cylinder, footrest, chrome base", "owdId": "742411.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-022-BLK-FOOT-NYLB", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Black - No Cylinder - Footring - Nylon Base", "owdId": "748773.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-22-BLK-NOCYLD-FOOT-NYLB", "stockInHand": 12, "inventoryStock": 12, "model": "19", "color": "Black", "productName": "", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "Black - Footring - Nylon Base", "owdId": "748773.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "SHHGA019BLKSML", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "SMALl - Saddle Shape Stool with Adjustable Back Support and Tilt-able Seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "SMALL SADDLE SHAPE", "owdId": "744661.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-SMALL-BLK", "stockInHand": 1, "inventoryStock": 1, "model": "19", "color": "Black", "productName": "SMALL - Saddle Shape Stool with Adjustable Back Support and Tilt-able Seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/small-saddle-shape-stool-with-adjustable-back-support-and-tilt-able-seat", "notes": "SMALL SADDLE SHAPE", "owdId": "811580.0", "upcoming": "", "deliveries": { "July-25": "15.0", "Nov-23": "10.0" }, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "2005-DM-BLK", "stockInHand": 3, "inventoryStock": 3, "model": "19", "color": "Black", "productName": "ANJI Duomei - 2005-DM-BLK - Ergonomic Multi Functional Rolling Saddle Stool", "manufacturer": "Anji Duomei", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/small-saddle-shape-stool-with-adjustable-back-support-and-tilt-able-seat", "notes": "Finish this first before sending small 019", "owdId": "748849.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "LEGEND: Number inside parenthesis indicates stocks onhand when PO was ordered", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-RUST-ORNG-NO-CSTR", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Rust Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "RUST ORANGE - Medium - NO CASTERS", "owdId": "763150.0", "upcoming": "", "deliveries": {}, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "021-ORNG-RUST", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Rust Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "747824.0", "upcoming": "", "deliveries": {}, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "N-021-RUST-ORNG", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Rust Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "metal base plus footrest / old sku", "owdId": "764875.0", "upcoming": "", "deliveries": {}, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-RUST-ORNG", "stockInHand": 33, "inventoryStock": 33, "model": "19", "color": "Rust Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "New model August 2023", "owdId": "775793.0", "upcoming": "", "deliveries": { "Jan-25": "25(13)", "July- 25": "20.0", "June- 25": "20.0", "May-25": "20.0", "Sept-24": "20.0", "Nov-23": "20.0" }, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "N2-024-RUST-ORNG-METAL-BASE", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Rust Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "metal base w/out footrest", "owdId": "785400.0", "upcoming": "", "deliveries": { "Nov-23": "10.0" }, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-SMALL-RUST-ORNG", "stockInHand": 36, "inventoryStock": 36, "model": "19", "color": "Rust Orange", "productName": "SMALL - Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/small-saddle-shape-stool-with-adjustable-back-support-and-tilt-able-seat?variant=31910066421871", "notes": "SMALL SADDLE SHAPE", "owdId": "811582.0", "upcoming": "", "deliveries": { "July- 25": "10.0", "Sept-24": "15.0" }, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "019-ORNG-RUST-SHORT", "stockInHand": 0, "inventoryStock": null, "model": "19", "color": "Rust Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-RUST-ORNG-NO-CSTR", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Rust Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "763150.0", "upcoming": "", "deliveries": {}, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "021-ORNG-RUST", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Rust Onrage", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "747824.0", "upcoming": "", "deliveries": {}, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "N2-021-RUST-ORNG", "stockInHand": 5, "inventoryStock": 5, "model": "19", "color": "Rust Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/ergonomic-comfortable-saddle-style-chair-with-footrest-backrest-chair?variant=40745230860399", "notes": "Footrest and Metal Base", "owdId": "811575.0", "upcoming": "", "deliveries": { "July- 25": "5.0", "June- 25": "5.0", "May-25": "5.0", "Nov-23": "3.0" }, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "LEGEND: Number inside parenthesis indicates stocks onhand when PO was ordered", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" }, { "sku": "SHHG-A019-PRPL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "744660.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-DRK-PRPL", "stockInHand": 31, "inventoryStock": 31, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Standard chair", "owdId": "811579.0", "upcoming": "", "deliveries": { "Jan-26": "25(17)", "July - 25": "20.0", "June-25": "15.0", "May-25": "15.0", "Jan - 25": "20.0", "Sep-24": "10.0" }, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "019-PRPL-SHORT", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "019 with short cylinder", "owdId": "748909.0", "upcoming": "", "deliveries": { "Sep-24": "10.0" }, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "019-PRPL-TALL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "019 with tall cylinder", "owdId": "748790.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "A019-PRPL-TALL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "019 with tall cylinder", "owdId": "748910.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "A019-PRPL-SHORT", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "019 with short cylinder", "owdId": "748909.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-DRK-PRPL-NO-CYLD-NO-CSTR", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "No Cylinder No Casters", "owdId": "764869.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-DRK-PRPL-NO-CSTR", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "No Casters", "owdId": "763148.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-SMALL-PRPL", "stockInHand": 14, "inventoryStock": 14, "model": "19", "color": "Purple", "productName": "Small Saddle Shape Stool with Adjustable Back Support and Tilt-able Seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Small Saddle Shape", "owdId": "811581.0", "upcoming": "", "deliveries": { "Jan-26": "15(0)", "July - 25": "10.0", "Sep-24": "10.0" }, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-DRK-PRPL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Standard chair", "owdId": "832529.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "LEGEND: Number inside parenthesis indicates stocks onhand when PO was ordered", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-GREEN", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Green", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "744656.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Green", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-GRN", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Green", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "759036.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Green", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-GRN-NOCYLD", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Green", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "No cylinder", "owdId": "748758.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Green", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-LIGHT-GREEN", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Green", "productName": "Ergonomic Comfortable Saddle Style Chair With Footrest & Backrest", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "764870.0", "upcoming": "", "deliveries": { "July-25": "5.0" }, "sheetName": "019-Green", "sourceFile": "019-021.xlsx" }, { "sku": "021-GREEN", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Green", "productName": "Ergonomic Comfortable Saddle Style Chair With Footrest & Backrest", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "744686.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Green", "sourceFile": "019-021.xlsx" }, { "sku": "N-021-GRN-FOOT-CRMB", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Green", "productName": "Ergonomic Comfortable Saddle Style Chair With Footrest & Backrest", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "758851.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Green", "sourceFile": "019-021.xlsx" }, { "sku": "N-22-GRN-NOCYLD-FOOT-NYLB", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Green", "productName": "Ergonomic Comfortable Saddle Style Chair With Footrest & Backrest", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "748759.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Green", "sourceFile": "019-021.xlsx" }, { "sku": "We will be discontinuing Green Feb 06 2026 Decided by the team and AL", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019-Green", "sourceFile": "019-021.xlsx" }, { "sku": "019-GREY", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Grey", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "744657", "upcoming": "", "deliveries": {}, "sheetName": "019-GREY", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-GREY", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Grey", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "811577", "upcoming": "", "deliveries": {}, "sheetName": "019-GREY", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-GREY", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Grey", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "748760", "upcoming": "", "deliveries": {}, "sheetName": "019-GREY", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-LIGHT-GREY", "stockInHand": 1, "inventoryStock": 1, "model": "19", "color": "Grey", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "764871", "upcoming": "", "deliveries": {}, "sheetName": "019-GREY", "sourceFile": "019-021.xlsx" }, { "sku": "021-GREY", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Grey", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "744685", "upcoming": "", "deliveries": {}, "sheetName": "019-GREY", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-LIGHT GREY", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Grey", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "814338", "upcoming": "", "deliveries": { "Sept-24": "15.0" }, "sheetName": "019-GREY", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-ORGNL-LGHT-BRWN", "stockInHand": 15, "inventoryStock": 15, "model": "19", "color": "Light Brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "811576.0", "upcoming": "", "deliveries": { "Jan-26": "15(6)", "July - 25": "21.0", "Sept-24": "15.0", "Nov-23": "10.0" }, "sheetName": "019-LightBrown", "sourceFile": "019-021.xlsx" }, { "sku": "019-LBRWN-SHORT", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Light Brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "748776.0", "upcoming": "", "deliveries": {}, "sheetName": "019-LightBrown", "sourceFile": "019-021.xlsx" }, { "sku": "019-LBRWN-TALL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Light Brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "748777.0", "upcoming": "", "deliveries": {}, "sheetName": "019-LightBrown", "sourceFile": "019-021.xlsx" }, { "sku": "SHHGA019LBRWN", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Light Brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "744654.0", "upcoming": "", "deliveries": {}, "sheetName": "019-LightBrown", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-ORGINAL-LIGHT-BROWN", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Light Brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "764872.0", "upcoming": "", "deliveries": { "Sept-24": "15.0" }, "sheetName": "019-LightBrown", "sourceFile": "019-021.xlsx" }, { "sku": "021-LIGHTBROWN", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Light Brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Metal base plus footrest", "owdId": "748782.0", "upcoming": "", "deliveries": {}, "sheetName": "019-LightBrown", "sourceFile": "019-021.xlsx" }, { "sku": "LEGEND: Number inside parenthesis indicates stocks onhand when PO was ordered", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019-LightBrown", "sourceFile": "019-021.xlsx" }, { "sku": "SHHGA019DBWN", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Dark brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "Old SKU/model", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019 - Dark Brown ", "sourceFile": "019-021.xlsx" }, { "sku": "019-DBRWN-SHORT", "stockInHand": 3, "inventoryStock": 3, "model": "19", "color": "Dark brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair with short cylinder", "owdId": "748907.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Dark Brown ", "sourceFile": "019-021.xlsx" }, { "sku": "019-DBRWN-TALL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Dark brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "019 with tall cylinder", "owdId": "748788.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Dark Brown ", "sourceFile": "019-021.xlsx" }, { "sku": "A019-DBRWN-TALL", "stockInHand": 4, "inventoryStock": 4, "model": "19", "color": "Dark brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair with tall cylinder", "owdId": "748908.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Dark Brown ", "sourceFile": "019-021.xlsx" }, { "sku": "021-DEEP-BROWN", "stockInHand": 5, "inventoryStock": 5, "model": "19", "color": "Dark brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting", "notes": "footrest and metal base", "owdId": "744684.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Dark Brown ", "sourceFile": "019-021.xlsx" }, { "sku": "We will be discontinuing Dark Brown Feb 06 2026 Decided by the team and AL", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019 - Dark Brown ", "sourceFile": "019-021.xlsx" }, { "sku": "SHHGA019RED", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Red", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "HongGang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "748906.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-RED", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Red", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "764868.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" }, { "sku": "N3-019-RED", "stockInHand": 4, "inventoryStock": 4, "model": "19", "color": "Red", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "811578.0", "upcoming": "", "deliveries": { "Sept-24": "10.0" }, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" }, { "sku": "019-RED-SHORT", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Red", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "019 with short cylinder", "owdId": "748780.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" }, { "sku": "019-RED-TALL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Red", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "019 with tall cylinder", "owdId": "748781.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" }, { "sku": "021-RED", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Red", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "metal base plus footring", "owdId": "767104.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-RED", "stockInHand": 11, "inventoryStock": 11, "model": "19", "color": "Red", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "832528.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" }, { "sku": "We will be discontinuing Red Feb 06 2026 Decided by the team and AL", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-WHT", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "White", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "758847", "upcoming": "", "deliveries": {}, "sheetName": "019-White", "sourceFile": "019-021.xlsx" }, { "sku": "SHHGA019WHT", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "White", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "744655", "upcoming": "", "deliveries": {}, "sheetName": "019-White", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-WHT", "stockInHand": 1, "inventoryStock": 1, "model": "19", "color": "White", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "776005", "upcoming": "", "deliveries": { "July - 25": "5.0", "June-25": "5.0", "May-25": "5.0", "Nov-24": "10.0" }, "sheetName": "019-White", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-VNL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "vanilla", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "748754.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Vanilla", "sourceFile": "019-021.xlsx" }, { "sku": "SHHG-A019-VNL", "stockInHand": 0, "inventoryStock": null, "model": "19", "color": "vanilla", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Hongang", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019-Vanilla", "sourceFile": "019-021.xlsx" }, { "sku": "N-22-VNL-NOCYLD-FOOT-NYLB", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "vanilla", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "no cylinder, footrest,nylon base", "owdId": "748755.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Vanilla", "sourceFile": "019-021.xlsx" }, { "sku": "N2-019-VNL", "stockInHand": 8, "inventoryStock": 7, "model": "19", "color": "vanilla", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "828543.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Vanilla", "sourceFile": "019-021.xlsx" }, { "sku": "LEGEND: Number inside parenthesis indicates stocks onhand when PO was ordered", "stockInHand": 0, "inventoryStock": null, "model": "nan", "color": "", "productName": "", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019-Vanilla", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-PRPL", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Light Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "standard chair", "owdId": "748762", "upcoming": "", "deliveries": {}, "sheetName": "019-Light Purple", "sourceFile": "019-021.xlsx" }, { "sku": "N-22-PRPL-NOCYLD-FOOT-NYLB", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Light Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-tilt-able-seat?variant=31364541349999", "notes": "no cylinder, footrest, nylon base", "owdId": "748763", "upcoming": "", "deliveries": {}, "sheetName": "019-Light Purple", "sourceFile": "019-021.xlsx" }, { "sku": "N-019-ORNG", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Bright Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting?variant=8115186860143", "notes": "standard chair", "owdId": "748756", "upcoming": "", "deliveries": {}, "sheetName": "019-Bright Orange", "sourceFile": "019-021.xlsx" }, { "sku": "N-021-ORNG", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Bright Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "https://www.sithealthier.com/collections/es/products/saddle-shape-stool-with-back-support-and-seat-tilting?variant=8115186860143", "notes": "footrest and metal base", "owdId": "759035", "upcoming": "", "deliveries": {}, "sheetName": "019-Bright Orange", "sourceFile": "019-021.xlsx" }];
-    const FALLBACK_INVENTORY = { "K-22-Base": 4, "K-16-ALLOY-FOOTRING": 0, "N-019-REPLACEPART": 22, "901SNL-NAVY-LEATHER": 0, "N-020-BLK-TALL-FOOT-NYLB-INLINE": 0, "SHHGCSLOCKBLK": 15, "N-057-BLK-NOCYLD-FOOT": 0, "N-057-PRPL-NOCYLD": 0, "GP-034-SH-BLK": 0, "SHHY7021-BLK": 16, "7013-BLACK": 7, "SWNG-FIT-BLK-CANDY-SALLI": 0, "4008SH-BLACK": 16, "TS-09-FOOT-SH": 0, "901SNL-NAVY-LEATHER-Openbox-SH11822": 0, "021-GREY-SH11895-2-OPENBOX": 0, "GP-ARMRST-BLK-OPENBOX-SH12084-1": 1, "N2-024-RUST-ORNG-METAL-BASE": 0, "CC-A009-INLINE-LOCK": 251, "HOC-TS-09-DBL-ARM-RST": 0, "N-020-BLK-FOOT-NYLB": 0, "901-3F-VINYL-BACKREST": 40, "SHKW900SNL2FBK": 35, "SHHGCSBIGWHL": 0, "019-BACKREST-DECO": 14, "KW-HAND-SCREWS": 5, "SALLI-HARD-WHEELS": 2, "N-019-GRN-NOCYLD": 0, "019-LBRWN-SHORT": 0, "A019-DBRWN-SHORT": 0, "A019-DBRWN-TALL": 4, "N-019-DRK-PRPL-NO-CSTR": 0, "N-ALUMINUM-BASE": 100, "SH-HY-318-PLUS-MED": 41, "N2-019-LIGHT GREY": 0, "SH17999 -SML-TWIN-NO-BACK-2F-Openbox": 1, "SH18291-901SNV-2F-BLK-VYNL-NO-CYLD-Openbox": 0, "Misc": 79, "SIT-MOVE-65": 0, "BIG-SOFT-LOCKABLE-75": 4, "SHHGA019BLK": 0, "019-BLACK-TALL": 0, "021-GREEN": 0, "SHHGACSFOOTRING": 0, "SH3007-2": 0, "019-SPARES": 0, "N-020-BLK-FOOT-NYLB Open Box": 0, "N-019-BLK Open Box SH9058": 0, "N-22-BLK-NOCYLD-FOOT-NYLB": 12, "019-DBRWN-SHORT": 3, "019-PRPL-SHORT": 0, "GP-ARMRST-BLK": 0, "019-BLACK-TALL-INLINE-SH9775-OPENBOX": 0, "SML-TWIN-NO-BACK-2F": 29, "SCREW-DECO-PART-KW": 12, "N-019-WHT": 0, "SHKW901SNV2FBKV-Openbox-SH10517": 0, "N-019-ORGINAL-LIGHT-BROWN": 0, "K-2-LOCKWHEELS": 70, "SIT-3-LCK-INLN-WHLS": 0, "BIG-GLIDES-PADDED": 0, "SHHG-A019-PRPL": 0, "057-ORNG-RUST": 0, "021-GREY": 0, "LEFT-ARMREST": 0, "N-020-BLK-FOOT-NYLB-DEMO": 0, "SOMA-SADDLE-NB": 0, "SALLI-MINI-METAL": 1, "7021-BK-REST-BLK": 3, "N-019-PNK-NOCYLD": 0, "057-BLACK-TALL": 0, "GP-DOUBLE-ARM-BLK": 0, "A019-NOTILT-WHITE-OPENBOX-SH9365": 0, "SHHG-A019-BLK": 0, "SHHGA019WHT-OpenBox-SH9816": 0, "GP-ARMRST-BLK-MSHOLDER": 0, "901SNL-2F-BLK-LTH-NO-CYLD": 65, "N-019-BLK-FOOT-NYLB-DISTOOL-OPENBOX-SH10972": 0, "MS14-2-SPLIT-BACK-BLK-Footring-Openbox-SH11823": 0, "SHKW901SNV2FWN": 5, "SHKWCYLSM210MM": 0, "SHHGA019PNK": 0, "SHHG021BLK": 0, "SHHGACS02BSEBLK": 0, "TWIN-MECHANISM-ONLY": 15, "SALLI-MINI-BLACK": 1, "STANDARD-WHEELS": 0, "N-057-PRPL-NOCYLD-FOOT": 0, "S312-SH": 0, "CLASSIC-R-BLU-SALLI": 1, "TWIN-SEAT-ONLY": 18, "MS13-2-SPLIT-BLK": 0, "N-019-RUST-ORNG-NO-CSTR": 0, "N-057-ORIGINAL-RUST-ORNG": 0, "FG-ARMREST-TAPSCREW": 1, "N2-021-RUST-ORNG": 5, "EMTY-BOX-S2H-021": 0, "HOC-D19-2-1-SH": 3, "HY-SPARE-312-and-318-CURV": 14, "N2-019-LIGHT-GREEN": 0, "K-SILENT-WHEELS": 0, "SHKW901SNV2FGRN": 8, "SHKWFTRNGDK3": 0, "CYLINDER-MINI-12": 1, "N-019-VNL": 0, "SCREWS-FOR-MECH-KW": 15, "N2-019-WHT": 1, "N-MINI-CYLINDER": 44, "HOC-HQ-600": 0, "N4-057-PURPLE": 48, "901SNL-NAVY-LEATHER-OpenBox": 1, "4008SH-BLACK-openbox-SH15357": 0, "TWIN-MECHANISM-ONLY-SH16240": 1, "SH-HQ-E3": 6, "N4-057-BLK-SH17042-SPAREPARTS": 1, "SHWL-1430-GGFF-SH15861": 1, "N2-019-VNL-SH18154-Openbox": 0, "SH18301-SHHY7021-BLK-Openbox": 0, "K-16-STEEL-FOOTRING": 0, "901SNL-WHT-LEATHER": 0, "SIT-BRAKE-50": 32, "SHHGA019WHT": 0, "BAMBACH-MDM-CYLD": 0, "N-020-BLK-FOOT-NYLB Open Box SH9158": 0, "SHKW901SBL3FBKL Open Box SH9282": 0, "021-GREEN-OPENBOX-SH9353": 0, "N-057-BLK-NOCYLD": 0, "021-LIGHTBROWN": 0, "GP-004-SH-BLK": 0, "KNOB-SHHY7021": 4, "SWNG-FIT-BLK-LIM-SALLI": 0, "GP-TS-09-DBL-ARM-RST": 0, "901SNV-2F-BLK-VYNL-NO-CYLD": 0, "N-057-DRK-PRPL-NO-CSTR": 0, "N-CYLINDER-MEDIUM-200": 49, "N-020-BLK-TALL-FOOT-NYLB-OPENBOX-SH11521": 0, "K-140-FOOT-CONTROL": 15, "SH-HY-312-SQUARE": 0, "N2-019-BLK": 28, "N-020-BLK-SHORT-FOOT-NYLB": 1, "N-020-BLK-TALL-FOOT-NYLB": 1, "SHHGA057PNK": 0, "019-KNOBS-CYLD-DECO": 1, "SALLI-MEDIUM-BLK": 0, "KW-VNYL-WINE-SEAT": 1, "SALLI-SOFT-WHEELS": 0, "021-ORNG-RUST": 0, "N-22-GRN-NOCYLD-FOOT-NYLB": 0, "N-019-GREY": 0, "N-022-BLK-FOOT-NYLB": 0, "A019-PRPL-SHORT": 0, "A019-PRPL-TALL": 0, "N-019-BLK-SHORT-NO-CSTR": 0, "N-019-LIGHT-GREY": 1, "021-DEEP-BROWN-Openbox-SH12380": 0, "SHHY7021-BLK-OpenBox-SH12637": 0, "N-019-BLK-Openbox-SH13268": 0, "SHHG021BLK-openbox-SH13723": 0, "SH-HY-312-SQUARE-MED": 30, "SH-HY-318-PLUS-CURVE-MED": 30, "N-019-BLK": 0, "N-019-BLK-Tall": 0, "N-021-BLK-SHORT-FOOT-CRMB": 0, "SIT-3-INLINE-WHEELS": 0, "021-DEEP-BROWN": 5, "021-GREEN DEMO": 0, "KW-BK-REST-VYNL": 0, "A019-NOTILT-WHITE": 0, "N-22-VNL-NOCYLD-FOOT-NYLB": 0, "N-019-PRPL": 0, "N-057-BLK": 0, "019-GREY-openbox-SH9380": 0, "GP-ARMRST-HOLDERKNB": 2, "N-024-BLK-METAL-BASE": 0, "S318-SH-Openbox-SH11788": 0, "N2-019-RUST-ORNG": 33, "GP-FOSHAN-GOLDEN-SPARE-PARTS": 0, "SHKW360ARMRST-openbox-SH13723": 0, "CC-A003-INLINE-BOX": 0, "CC-A1575-3-INCH-PU-WHL-EMPTY-BOX": 0, "N-021-BLK-FOOT-CRMB": 0, "SHHGA057PRPL": 0, "019-PRPL-TALL": 0, "N-021-ORNG": 0, "N-019-GRN": 0, "N-260CM-TALL-CYLINDER": 19, "N-019-DRK-PRPL-NO-CYLD-NO-CSTR": 0, "N3-057-BLACK-TALL": 0, "HY7020-NO-BACK-BLK-500LBS": 43, "N-019-DRK-PRPL": 31, "N2-019-SMALL-BLK": 1, "AluminumBase": 0, "N-ALUMINUM- BASE": 0, "HOC-TS09-JST-BKRST": 3, "H0C-TS09-JST-BKRST": 0, "SHHG021BLK-SH16539-Openbox": 0, "N2-019-WHT-SH17599-OpenBox": 0, "SH18232-N4-057-PURPLE-Openbox": 0, "SH15822-N4-057-PURPLE-Openbox": 1, "SPAREPRTS-SH17636": 1, "K-19-BASE": 18, "SHKW901SNL-2FBLK": 45, "SHKW360ARMRST": 0, "019-GREY": 0, "SHHGCSSOFTBLK": 0, "SALLI-BLK-STND-BASE": 1, "019-GREEN-OPENBOX-SH9353": 0, "N-057-PRPL": 0, "057-BLACK-FOOTREST": 0, "GP-050A-SH-BLK": 0, "SHHY7021-PRPL": 2, "MULTI-BLK-CANDY-SALLI": 0, "N-019-BLK-Metal-Base": 0, "TS-01-RND-SNGL-HND-RST": 8, "K-MEDIUM-CYLINDERS": 0, "N-057-BLK-Openbox-SH11785": 0, "021-GREY-SH11895-1-OPENBOX": 0, "N2-024-BLK-METAL-BASE": 0, "GP-TS-09-SH-Openbox-SH11815": 0, "GP-ARMRST-BLK-OPENBOX-SH12084-2": 0, "901-TWIN-BACK-3F": 1, "N-057-ORIGINAL-RUST-ORNG-Openbox-SH12810": 0, "TS09-SH": 0, "SHKW901SBL3FBKL": 30, "SHKWCYLMD285MM": 57, "BIG-SOFT-WHEEL-75": 0, "SHHGA019BLK16": 0, "SHHGA019DBWN": 0, "KW- 3F-VINYL-BACK-NoSeat": 0, "SALLI-SWINGFIT": 0, "N-019-BLK-NOCYLD": 0, "019-RED-TALL": 0, "019-DBRWN-TALL": 0, "SML-TWIN-BACK-3F": 30, "900SNL-SEAT-ONLY": 0, "901-VINYL-SEAT-ONLY": 6, "MS13-2-SPLIT-MS-YLW": 0, "N-019-ORNG-OpenBox-SH10999": 0, "N3-057-BLACK-SHORT": 0, "901-3F-VINYL-BACKREST-Openbox-SH12535": 0, "N-019-BLK-Openbox-SH11873": 0, "N3-019-RED": 4, "N4-057-BLK": 120, "360-ARM-LEATHER": 0, "3F-MECHANISM-ONLY": 15, "SHHGA019LBRWN": 0, "019-GREEN": 0, "4008-SOFT-WHEELS": 0, "4008-SPARES": 9, "021-PURPLE": 0, "057-BLACK-SHORT": 0, "2005-DM-BLK": 3, "MULTI-BLK-LIM-SALLI": 0, "GP-TS-09-SH": 0, "N-019-BLK-NOCYLD-OPENBOX-SH10577": 0, "N-CYLINDER-SMALL-160": 37, "K-180-FOOT-CONTROL": 19, "4008-1-BACKREST-BLACK": 8, "N2-019-BLK-NO-WHL": 0, "N-019-BLK-Metal-Base-Openbox-SH12106": 0, "N3-057-BLACK-NO-WHEELS": 0, "SH-HY-3007-BLK": 7, "K-SHORT-160-CYLD": 0, "K-DOUBLEARMREST": 36, "SHST208-18": 0, "SHKW901SNV2FCH": 0, "SHKWCYLTL385MM": 0, "SHHGA019BLKSML": 0, "SHHGA057VNL": 0, "SHHGACS05CYLND26": 0, "ARMREST-SHHG": 0, "SALLI-SHORT-BLK": 0, "SALLI-MEDIUM-METALLIC": 0, "019-RED-SHORT": 0, "019-GREEN-OPENBOX-SH10351": 0, "SHKW360ARMRST-OPENBOX-SH10894": 0, "N-057-BLK-NO-CSTR": 0, "N-057-BLK-Openbox-SH11275": 0, "SHHY4008-BLK": 0, "SH-HY-318-PLUS": 0, "N-019-LBRWN-Footring-Openbox-SH12314": 0, "N-019-ORNG-OPENBOX-SH12465": 0, "N3-057-BLACK-FOORST": 0, "N2-019-GREY": 0, "N4-057-2PCS-BLK": 2, "KW-DISASSEMBLE-TOOL": 216, "KW-CHROME-BASE": 36, "SMALL-GLIDES-PADED": 0, "019-LBRWN-TALL": 0, "SHHGCSSILENT": 0, "N-021-GRN-FOOT-CRMB": 0, "MS14-2-SPLIT-BACK-BLK": 0, "N-FootRing": 47, "N-019-RED": 0, "N3-057-BLACK-NO-CYLD": 39, "N2-019-SMALL-PRPL": 14, "N2-019-SMALL-RUST-ORNG": 36, "N4-057-VANILLA": 19, "N-057-SMALL-BLK": 8, "EMPTY-BOX-S2H-ALUMINM-BASE": 50, "HOC-TS-09-BCKRST-ROD-ONLY": 0, "HY-SPARE-7020": 6, "N2-019-VNL": 7, "SH16244-901SNL-WHT-LEATHER-Openbox": 0, "SH17765-N2-019-BLK-Openbox": 0, "SH17908-HOC-SINGLE-ARMREST-SpareParts": 1, "HI-3-LCK-INLN-WHLS": 1, "CC-A009-INLINE-LOCK-FL": 0, "K-3-INLINE-WHEELS": 0, "N-019-BLK-SHORT": 0, "N-021-BLK-TALL-FOOT-CRMB": 20, "SHKW901SNV2FBKV": 0, "CYLINDER-STANDARD-20": 0, "SALLI-SHORT-METAL": 2, "N-019-ORNG": 0, "N-22-PRPL-NOCYLD-FOOT-NYLB": 0, "SHHGA019RED": 0, "S318-SH": 0, "SALLI-MULTI-SMALL-LBLACK-OPENBOX-SH10593": 0, "N-057-DRK-PRPL-NO-CYLD-NO-CSTR": 0, "N-021-RUST-ORNG": 0, "021-RED": 0, "HOC-DOUBLE-ARMREST": 9, "N2-019-SMALL-BLK-SH15854-OpenBox": 0, "SH16513-N2-019-BLK-OpenBox": 0, "CC-3221-SBIG-GLIDES": 17, "SHKW901SNL-2FBLK-OpenBox": 0, "CC-A012-TRANSPARENT": 240, "N4-057-BLK-SH15377": 0, "SHHY7021-PRPL-SH15993-openbox": 1, "N-019-GREEN": 0, "SH18030-SHKW901SBL3FBKL-Openbox": 0, "SH-RUDYJD240222-2-BACKREST": 3, "N-019-PRPL-SH15295": 0, "KW-CHROME-BASE-SH16326-SPARE": 1, "K-BLK-CYLD-160": 25, "N2-019-RED": 11, "SH-HY7020-BLK-500LBS-SH17342-Openbox": 0, "N2-019-ORGNL-LGHT-BRWN-SH17149-Openbox": 0, "N2-019-RUST-ORNG-SH17644": 0, "SHKW901SNL-2FBLK-NoMech": 1, "500 LBS Aluminium Base": 0, "SHKW901SNL-2FBLK-SH15332-Openbox": 1, "K-TALL-CYLD": 0, "SH18000-N4-057-BLK-Openbox": 0, "SH18000-NFootring": 0, "SH17455-K-SHORT-160-CYLD-Opebox": 1, "Openbox- N-057-BLK-NO-CSTR -SH11938": 0, "SH-HY-9006-BLK": 1, "BAMBACH-TORO-SH13390": 0, "SH-RUDYJD240222-1-NO-BACK": 0, "N4-057-RUST-ORNG": 20, "CC-A012- TRANSPARENT": 17, "SH-HY7020-BLK-FOOT-500LBS": 10, "N2-019-DRK-PRPL": 0, "N2-019-SMALL-BLK-SH17341-Openbox": 1, "HAIYUE-NYLON-BSE-500": 24, "HOC-SINGLE-ARMREST": 28, "HaiyueSpareParts": 0, "SH-HY-3007-BLK-SH14571": 0, "HOC-TS-09-NO-HND-RST": 13, "WL-1430-GG": 0, "CC-3215B-BELL-GLIDE": 4, "903 SEAT INNER BOX": 0, "SH7021-BCKRST-SCREWKNOB": 12, "SH18258-N-019-GRN-Openbox": 0, "N-057-SMALL-PURPLE": 28, "CC-A004-DUAL": 205, "HOC-TS-09-SH": 0, "N2-019-BLK-NO-CYLD": 39, "K-ALUMN-FOOTREST": 9, "4008SH-ORNG": 7, "S2H-STANDARD-WHL": 202, "N-057-SMALL-RSTORNGE": 0, "HY7012 - No Base": 2, "N4-057-RUST-ORNG-FOOT": 34, "N2-019-RUST-ORNG-SH16347-Openbox": 1, "HY-ALUMINUM-BSE-19": 27, "CC-A009-INLINE-LOCK-5": 99998, "N2-019-BLK-SH17521-Openbox": 0, "SH18147-N4-057-PURPLE-Openbox": 0, "HOC-TS-01-RND-SNGL-HND-RST": 0, "N3-057-BLK": 0, "GP-TS-09-SH-Openbox-SH12491": 0, "N-057-PRPL-SH12193-OPENBOX": 0, "N-019-BLK-SH12346-OPENBOX": 0, "4008SH-BLACK-Openbox-SH12480": 0, "SALLI-SEAT-COVER-LIGHT-GREY": 1, "019-GREY-SH12833-OPENBOX": 0, "SML-TWIN-BACK-3F-NO-MECH": 1, "N4-057-BLK-FOOT": 7, "TS09-BACKRESTONLY": 0, "N2-019-SMALL-BLK-SH17173-OpenBox": 0, "S2H-NYLON-BASE": 31, "SHKW901SNL-2FBLK-SH13365-Openbox": 1, "SIT-MOVE-2-INCH": 32, "2005-DM-BLK-SH16781-Openbox": 1, "SH18037-901SNV-2F-BLK-VYNL-NO-CYLD-Openbox": 0, "N-021-BLK-TALL-FOOT-CRMB+GLIDES": 0, "CC-A003-INLINE": 301, "SH-RUDY-MEDITATION-JD240": 0, "N-ROUND-SEAT": 0, "HOC-021-BLK": 0, "SH-HY7020-BLK-500LBS": 15, "N4-057-PURPLE-FOOT": 16, "STANDARD-WHEELS-SH16326-SPARE": 0, "BST-325-020-BLACK-FRM": 7, "K-BLK-CYLD-200": 34, "HQ-20240417 023-DTL": 2, "N2-019-SMALL-PRPL-SH17262-OPENBOX": 1, "TS09-ARMRST-BRCKT": 0, "SH-HY-318-PLUS-CURVE": 0, "N3-057-VANILLA": 0, "N-057-BLK-NO-CSTR-OPENBOX-SH12130": 0, "N3-057-BLK-OPENBOX-SH13012": 0, "CC-A1575-3-INCH-PU-WHEELS": 246, "N2-019-ORGNL-LGHT-BRWN": 15, "EMTY-BOX-S2H-019": 0, "N-PACKING-TAPE": 0, "HOC-DOUBLE-ARMREST-SCREWSONLY": 1, "N4-057-PURPLE-OPENBOX-SH16079": 0, "HY4008-BLK-NO-BASE": 6, "HOC-D19-2-CURVE": 7, "HY-SPARE-4008": 5, "SH-HAG-D-19-24": 0, "SH-HY7020-BLK-500LBS-SH16849-Openbox": 0, "HAIYUE-STANDARD-WHEELS": 36, "CC-A003-INLINE-5": 99998, "CC-A003-INLINE-FL": 0, "SH18037-CC-A004-DUAL-Openbox": 1 };
+    const FALLBACK_PRODUCTS = [
+      { "sku": "N4-057-BLK", "stockInHand": 120, "inventoryStock": 120, "model": "57", "color": "Black", "productName": "Hydraulic Saddle Rolling Ergonomic Medical Stool", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com", "notes": "standard chair", "owdId": "811585.0", "upcoming": "", "deliveries": { "Jan-26": "135(5)", "Sept-25": "60.0", "Jul-25": "56.0" }, "sheetName": "057 - Black", "sourceFile": "057.xlsx" },
+      { "sku": "N4-057-BLK-FOOT", "stockInHand": 7, "inventoryStock": 7, "model": "57", "color": "Black", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat & FootRest", "manufacturer": "Sit 2 Health-Bo", "imageUrl": "", "productUrl": "", "notes": "057 with Footrest", "owdId": "811593.0", "upcoming": "", "deliveries": { "Jan-26": "20(0)", "Jul-25": "10.0" }, "sheetName": "057 - Black", "sourceFile": "057.xlsx" },
+      { "sku": "N3-057-BLACK-NO-CYLD", "stockInHand": 39, "inventoryStock": 39, "model": "57", "color": "Black", "productName": "Hydraulic Saddle Shape Rolling Stool - No Cylinder", "manufacturer": "", "imageUrl": "", "productUrl": "", "notes": "057 w/out cylinder", "owdId": "", "upcoming": "", "deliveries": { "Jan-26": "40(0)" }, "sheetName": "057 - Black", "sourceFile": "057.xlsx" },
+      { "sku": "N4-057-PURPLE", "stockInHand": 48, "inventoryStock": 48, "model": "57", "color": "Purple", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "", "notes": "standard chair", "owdId": "811594.0", "upcoming": "", "deliveries": { "Jul-25": "15.0", "Jun-25": "35.0" }, "sheetName": "057-Purple", "sourceFile": "057.xlsx" },
+      { "sku": "N4-057-PURPLE-FOOT", "stockInHand": 16, "inventoryStock": 16, "model": "57", "color": "Purple", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat & FootRest", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "", "notes": "Dark Purple with Footrest", "owdId": "828353.0", "upcoming": "", "deliveries": { "Jul-25": "10.0" }, "sheetName": "057-Purple", "sourceFile": "057.xlsx" },
+      { "sku": "N4-057-RUST-ORNG", "stockInHand": 20, "inventoryStock": 20, "model": "57", "color": "Rust Orange", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "", "notes": "standard chair", "owdId": "811588.0", "upcoming": "", "deliveries": { "Jan-26": "30(10)", "Jul-25": "40.0" }, "sheetName": "057-Rust Orange", "sourceFile": "057.xlsx" },
+      { "sku": "N4-057-VANILLA", "stockInHand": 19, "inventoryStock": 19, "model": "57", "color": "Vanilla", "productName": "Hydraulic Saddle Shape Rolling Stool with Tilt-able Seat", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "", "notes": "standard chair", "owdId": "811595.0", "upcoming": "", "deliveries": { "Dec-25": "15(0)", "Jul-25": "10.0" }, "sheetName": "057-Vanilla", "sourceFile": "057.xlsx" },
+      { "sku": "N-057-SMALL-PURPLE", "stockInHand": 28, "inventoryStock": 28, "model": "57", "color": "Purple", "productName": "Small Hydraulic Saddle Shape Rolling Stool - Purple", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "", "notes": "SMALL SADDLE SHAPE", "owdId": "811589", "upcoming": "", "deliveries": { "Jul-25": "20.0" }, "sheetName": "057-Small", "sourceFile": "057.xlsx" },
+      { "sku": "N-057-SMALL-BLK", "stockInHand": 8, "inventoryStock": 8, "model": "57", "color": "Black", "productName": "Small Hydraulic Saddle Shape Rolling Stool - Black", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "", "notes": "SMALL SADDLE SHAPE", "owdId": "811596", "upcoming": "", "deliveries": { "Jul-25": "15.0" }, "sheetName": "057-Small", "sourceFile": "057.xlsx" },
+      { "sku": "N2-019-BLK", "stockInHand": 31, "inventoryStock": 28, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "", "notes": "New model", "owdId": "775790.0", "upcoming": "", "deliveries": { "Jan-26": "40(0)", "July-25": "51.0" }, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" },
+      { "sku": "N2-019-BLK-NO-CYLD", "stockInHand": 39, "inventoryStock": 39, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support - No Cylinder", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "", "notes": "No Cylinder", "owdId": "825878.0", "upcoming": "", "deliveries": { "Jan-26": "40(0)" }, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" },
+      { "sku": "N2-019-RUST-ORNG", "stockInHand": 33, "inventoryStock": 33, "model": "19", "color": "Rust Orange", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "", "notes": "New model August 2023", "owdId": "775793.0", "upcoming": "", "deliveries": { "July-25": "20.0", "May-25": "20.0" }, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" },
+      { "sku": "N-019-DRK-PRPL", "stockInHand": 31, "inventoryStock": 31, "model": "19", "color": "Purple", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "", "notes": "Standard chair", "owdId": "811579.0", "upcoming": "", "deliveries": { "Jan-26": "25(17)", "July-25": "20.0" }, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" },
+      { "sku": "N2-019-SMALL-PRPL", "stockInHand": 14, "inventoryStock": 14, "model": "19", "color": "Purple", "productName": "Small Saddle Shape Stool with Back Support", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "", "notes": "Small Saddle Shape", "owdId": "811581.0", "upcoming": "", "deliveries": { "Jan-26": "15(0)" }, "sheetName": "019-Purple", "sourceFile": "019-021.xlsx" },
+      { "sku": "N2-019-ORGNL-LGHT-BRWN", "stockInHand": 15, "inventoryStock": 15, "model": "19", "color": "Light Brown", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "", "notes": "standard chair", "owdId": "811576.0", "upcoming": "", "deliveries": { "Jan-26": "15(6)", "July-25": "21.0" }, "sheetName": "019-LightBrown", "sourceFile": "019-021.xlsx" },
+      { "sku": "N2-019-SMALL-RUST-ORNG", "stockInHand": 36, "inventoryStock": 36, "model": "19", "color": "Rust Orange", "productName": "Small Saddle Shape Stool with Back Support", "manufacturer": "Sit 2 Health", "imageUrl": "", "productUrl": "", "notes": "SMALL SADDLE SHAPE", "owdId": "811582.0", "upcoming": "", "deliveries": { "July-25": "10.0" }, "sheetName": "019-RustOrange", "sourceFile": "019-021.xlsx" },
+      { "sku": "N3-019-RED", "stockInHand": 4, "inventoryStock": 4, "model": "19", "color": "Red", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "", "notes": "standard chair", "owdId": "811578.0", "upcoming": "", "deliveries": { "Sept-24": "10.0" }, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" },
+      { "sku": "N2-019-RED", "stockInHand": 11, "inventoryStock": 11, "model": "19", "color": "Red", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "", "notes": "standard chair", "owdId": "832528.0", "upcoming": "", "deliveries": {}, "sheetName": "019-Red", "sourceFile": "019-021.xlsx" },
+      { "sku": "N-021-BLK-TALL-FOOT-CRMB", "stockInHand": 20, "inventoryStock": 20, "model": "19", "color": "Black", "productName": "Ergonomic Comfortable Saddle Style Chair With Footrest & Backrest", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "", "notes": "tall cylinder, footrest, chrome base", "owdId": "742411.0", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" },
+      { "sku": "N-019-BLK", "stockInHand": 0, "inventoryStock": 0, "model": "19", "color": "Black", "productName": "Saddle Shape Stool with Back Support and Tilt-able seat", "manufacturer": "Sit2Health", "imageUrl": "", "productUrl": "", "notes": "Old Model", "owdId": "", "upcoming": "", "deliveries": {}, "sheetName": "019 - Black", "sourceFile": "019-021.xlsx" }
+    ];
+    const FALLBACK_INVENTORY = { "N4-057-BLK": 120, "N4-057-BLK-FOOT": 7, "N3-057-BLACK-NO-CYLD": 39, "N4-057-PURPLE": 48, "N4-057-PURPLE-FOOT": 16, "N4-057-RUST-ORNG": 20, "N4-057-VANILLA": 19, "N-057-SMALL-PURPLE": 28, "N-057-SMALL-BLK": 8, "N2-019-BLK": 28, "N2-019-BLK-NO-CYLD": 39, "N2-019-RUST-ORNG": 33, "N-019-DRK-PRPL": 31, "N2-019-SMALL-PRPL": 14, "N2-019-ORGNL-LGHT-BRWN": 15, "N2-019-SMALL-RUST-ORNG": 36, "N3-019-RED": 4, "N2-019-RED": 11, "N-021-BLK-TALL-FOOT-CRMB": 20 };
 
-    // ─── Color map ────────────────────────────────────────────────────────────────
-    const COLOR_MAP = {
-      black: '#2d2d2d', white: '#f0f0f0', red: '#e53935', purple: '#9c27b0',
-      'light purple': '#ce93d8', 'dark purple': '#6a1b9a', puple: '#9c27b0',
-      vanilla: '#f5e6c8', grey: '#9e9e9e', gray: '#9e9e9e', green: '#43a047',
-      'rust orange': '#bf360c', 'rust onrage': '#bf360c', orange: '#ef6c00',
-      'bright orange': '#ff6d00', 'light brown': '#a1887f', 'dark brown': '#4e342e',
-      blue: '#1e88e5', pink: '#e91e63', yellow: '#fdd835'
-    };
-    function colorDot(c) { const k = (c || '').toLowerCase().trim(); return `<span class="color-dot" style="background:${COLOR_MAP[k] || '#555'}"></span>` }
-    function stockCls(n) { return n <= 0 ? 'sz' : n <= 10 ? 'sl' : n <= 50 ? 'sm' : 'sh' }
-    function stockColor(n) { return n <= 0 ? 'var(--text3)' : n <= 10 ? 'var(--red)' : n <= 50 ? 'var(--yellow)' : 'var(--green)' }
+    const COLOR_MAP = { black: '#2d2d2d', white: '#f0f0f0', red: '#e53935', purple: '#9c27b0', 'light purple': '#ce93d8', 'dark purple': '#6a1b9a', puple: '#9c27b0', vanilla: '#f5e6c8', grey: '#9e9e9e', gray: '#9e9e9e', green: '#43a047', 'rust orange': '#bf360c', 'rust onrage': '#bf360c', orange: '#ef6c00', 'bright orange': '#ff6d00', 'light brown': '#a1887f', 'dark brown': '#4e342e', blue: '#1e88e5', pink: '#e91e63', yellow: '#fdd835' };
+    function cDot(c, sz) { sz = sz || 10; const k = (c || '').toLowerCase().trim(); return `<span style="width:${sz}px;height:${sz}px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:${COLOR_MAP[k] || '#555'};display:inline-block;flex-shrink:0"></span>` }
+    function sCls(n) { return n <= 0 ? 'sz' : n <= 10 ? 'sl' : n <= 50 ? 'sm' : 'sh' }
+    function sColor(n) { return n <= 0 ? 'var(--text3)' : n <= 10 ? 'var(--red)' : n <= 50 ? 'var(--yellow)' : 'var(--green)' }
 
-    // ─── API URL ──────────────────────────────────────────────────────────────────
     if (apiUrl) document.getElementById('apiUrlInput').value = apiUrl;
 
-    function toggleApiPanel() {
-      const panel = document.getElementById('apiPanel');
-      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    function toggleApiPanel() { const p = document.getElementById('apiPanel'); p.style.display = p.style.display === 'none' ? 'block' : 'none'; }
+    document.addEventListener('click', e => { const p = document.getElementById('apiPanel'), b = document.getElementById('apiConnectBtn'); if (p && p.style.display !== 'none' && !p.contains(e.target) && !b.contains(e.target)) p.style.display = 'none'; });
+    function saveApiUrl() { const v = document.getElementById('apiUrlInput').value.trim(); if (!v) { showToast('URL দাও'); return; } document.getElementById('apiPanel').style.display = 'none'; apiUrl = v; localStorage.setItem('stockview_api_url', v); loadData(true); }
+    function setApiStatus(s, t) { const d = document.getElementById('apiDot'), tx = document.getElementById('apiStatusText'); const c = { connected: 'var(--green)', loading: 'var(--yellow)', disconnected: 'var(--red)' }; if (d) d.style.background = c[s] || 'var(--text3)'; if (tx) tx.textContent = t; }
+
+    function fetchJSONP(url, opts) { opts = opts || {}; return new Promise((res, rej) => { const cb = '__sv_' + Date.now(), s = document.createElement('script'), t = setTimeout(() => { cleanup(); rej(new Error('Timeout')); }, 20000); function cleanup() { clearTimeout(t); delete window[cb]; s.parentNode && s.parentNode.removeChild(s); } window[cb] = d => { cleanup(); res(d); }; s.onerror = () => { cleanup(); rej(new Error('Script load failed')); }; const clean = url.replace(/[?&]callback=[^&]*/g, '').replace(/[?&]_t=[^&]*/g, ''), sep = clean.includes('?') ? '&' : '?'; s.src = clean + sep + 'callback=' + cb + (opts.noCache ? '&nocache=1' : '') + '&_t=' + Date.now(); document.head.appendChild(s); }); }
+
+    async function loadData(force) {
+      force = force || false; const btn = document.getElementById('refreshBtn'); btn.classList.add('spinning'); setApiStatus('loading', 'Connecting…'); PRODUCTS = []; INVENTORY = {};
+      if (apiUrl) { try { const d = await fetchJSONP(apiUrl, { noCache: force }); if (d.error) throw new Error(d.error); PRODUCTS = d.products || []; INVENTORY = d.inventory || {}; setApiStatus('connected', 'Live — Google Sheets'); const cb = document.getElementById('apiConnectBtn'); if (cb) { cb.textContent = '✅ Live'; cb.classList.add('connected'); } document.getElementById('statDot').classList.remove('offline'); showToast('✅ ' + PRODUCTS.length + ' products loaded'); startAutoRefresh(); } catch (e) { console.error(e); setApiStatus('disconnected', 'Connection failed'); document.getElementById('statDot').classList.add('offline'); showToast('⚠️ API error — offline data'); useFallback(); } }
+      else { useFallback(); setApiStatus('disconnected', 'No API — Offline data'); }
+      btn.classList.remove('spinning'); buildFilters(); render();
     }
-    // Close panel when clicking outside
-    document.addEventListener('click', function (e) {
-      const panel = document.getElementById('apiPanel');
-      const btn = document.getElementById('apiConnectBtn');
-      if (panel && panel.style.display !== 'none' && !panel.contains(e.target) && !btn.contains(e.target)) {
-        panel.style.display = 'none';
+
+    function useFallback() { PRODUCTS = FALLBACK_PRODUCTS; INVENTORY = FALLBACK_INVENTORY; PRODUCTS.forEach(p => { if (INVENTORY[p.sku] !== undefined) p.inventoryStock = INVENTORY[p.sku]; }); }
+    function startAutoRefresh() { clearInterval(autoRefreshTimer); autoRefreshTimer = setInterval(() => loadData(false), 10000); }
+
+    async function saveNote(sku, note, btnEl, statusEl) {
+      if (!apiUrl) { statusEl.textContent = '❌ API not connected'; statusEl.className = 'note-status err'; return; }
+      btnEl.disabled = true; statusEl.textContent = 'Saving…'; statusEl.className = 'note-status';
+      try {
+        const d = await fetchJSONP(apiUrl + (apiUrl.includes('?') ? '&' : '?') + 'action=saveNote&sku=' + encodeURIComponent(sku) + '&note=' + encodeURIComponent(note));
+        if (d.success) { statusEl.textContent = '✅ Saved'; statusEl.className = 'note-status ok'; const p = PRODUCTS.find(x => x.sku === sku); if (p) p.notes = note; setTimeout(() => { statusEl.textContent = ''; }, 3000); }
+        else throw new Error(d.error || 'Unknown error');
       }
-    });
-
-    function saveApiUrl() {
-      const val = document.getElementById('apiUrlInput').value.trim();
-      if (!val) return showToast('❌ URL দাও');
-      document.getElementById('apiPanel').style.display = 'none';
-      apiUrl = val;
-      localStorage.setItem('stockview_api_url', val);
-      loadData(true);
+      catch (e) { statusEl.textContent = '❌ ' + e.message; statusEl.className = 'note-status err'; }
+      btnEl.disabled = false;
     }
 
-    // ─── Data loading ─────────────────────────────────────────────────────────────
-    // JSONP fetch — bypasses CORS for Google Apps Script
-    // Apps Script does a 302 redirect; JSONP handles it via <script> tag
-    function fetchJSONP(baseUrl, options = {}) {
-      return new Promise((resolve, reject) => {
-        const cbName = '__sv_' + Date.now();
-        const script = document.createElement('script');
-        const timer = setTimeout(() => { cleanup(); reject(new Error('Timeout after 20s')); }, 20000);
-
-        function cleanup() {
-          clearTimeout(timer);
-          delete window[cbName];
-          script.parentNode && script.parentNode.removeChild(script);
-        }
-
-        window[cbName] = function (data) { cleanup(); resolve(data); };
-        script.onerror = function () { cleanup(); reject(new Error('Could not load Apps Script URL — check deployment settings')); };
-
-        // Strip any existing callback param, then add ours
-        const clean = baseUrl.replace(/[?&]callback=[^&]*/g, '').replace(/[?&]_t=[^&]*/g, '');
-        const sep = clean.includes('?') ? '&' : '?';
-        // noCache flag forces Apps Script to bypass its cache
-        const nc = options.noCache ? '&nocache=1' : '';
-        script.src = clean + sep + 'callback=' + cbName + nc + '&_t=' + Date.now();
-        document.head.appendChild(script);
-      });
-    }
-
-    async function loadData(force = false) {
-      const btn = document.getElementById('refreshBtn');
-      btn.classList.add('spinning');
-      setApiStatus('loading', 'Connecting…');
-
-      if (apiUrl) {
-        try {
-          const data = await fetchJSONP(apiUrl, { noCache: force });
-          if (data.error) throw new Error(data.error);
-
-          PRODUCTS = data.products || [];
-          INVENTORY = data.inventory || {};
-
-          if (data.lastUpdated) {
-            const d = new Date(data.lastUpdated);
-            document.getElementById('lastUpdatedTime').textContent = d.toLocaleString();
-            document.getElementById('lastUpdatedBar').style.display = 'flex';
-          }
-
-          setApiStatus('connected', 'Live — Google Sheets');
-          const btn = document.getElementById('apiConnectBtn');
-          if (btn) { btn.textContent = '✅ Live'; btn.style.borderColor = 'var(--green)'; btn.style.color = 'var(--green)'; }
-          document.getElementById('statDot').classList.remove('offline');
-          showToast('✅ Live data loaded — ' + PRODUCTS.length + ' products');
-          startAutoRefresh();
-        } catch (e) {
-          console.error('API error:', e);
-          setApiStatus('disconnected', 'Connection failed');
-          document.getElementById('statDot').classList.add('offline');
-          showToast('⚠️ API error — showing cached data');
-          useFallback();
-        }
-      } else {
-        useFallback();
-        setApiStatus('disconnected', 'No API — Offline data');
-      }
-
-      btn.classList.remove('spinning');
-      buildFilterChips();
-      renderGrid();
-    }
-
-    function useFallback() {
-      PRODUCTS = FALLBACK_PRODUCTS;
-      INVENTORY = FALLBACK_INVENTORY;
-      PRODUCTS.forEach(p => { if (INVENTORY[p.sku] !== undefined) p.inventoryStock = INVENTORY[p.sku]; });
-    }
-
-    function setApiStatus(state, text) {
-      const dot = document.getElementById('apiDot');
-      dot.className = 'api-dot ' + (state === 'connected' ? 'connected' : state === 'loading' ? 'loading' : 'disconnected');
-      document.getElementById('apiStatusText').textContent = text;
-    }
-
-    // Auto-refresh every 5 minutes when connected
-    function startAutoRefresh() {
-      clearInterval(autoRefreshTimer);
-      autoRefreshTimer = setInterval(() => loadData(false), 10 * 1000); // check every 10s
-    }
-
-    // ─── Filters ──────────────────────────────────────────────────────────────────
-    function buildFilterChips() {
-      const chips = document.getElementById('filterChips');
-      chips.innerHTML = '<div class="chip active" data-filter="all" onclick="setFilter(\'all\',this)">All</div>';
+    function buildFilters() {
+      const mc = document.getElementById('modelChips');
+      mc.innerHTML = '<span class="filter-lbl">Model</span>';
+      const allM = document.createElement('div'); allM.className = 'chip' + (activeModel === 'all' ? ' active' : ''); allM.textContent = 'All'; allM.onclick = () => setModel('all', allM); mc.appendChild(allM);
       const models = [...new Set(PRODUCTS.map(p => p.model).filter(m => m && m !== 'nan' && m !== ''))].sort();
-      models.forEach(m => {
-        const d = document.createElement('div');
-        d.className = 'chip'; d.dataset.filter = m;
-        d.textContent = 'Model ' + m;
-        d.onclick = function () { setFilter(m, this); };
-        chips.appendChild(d);
-      });
-      ['In Stock', 'Out of Stock'].forEach(s => {
-        const d = document.createElement('div');
-        d.className = 'chip'; d.dataset.filter = s;
-        d.textContent = s;
-        d.onclick = function () { setFilter(s, this); };
-        chips.appendChild(d);
-      });
-      if (activeFilter !== 'all') {
-        const active = chips.querySelector(`[data-filter="${activeFilter}"]`);
-        if (active) { chips.querySelector('.active').classList.remove('active'); active.classList.add('active'); }
-      }
+      models.forEach(m => { const d = document.createElement('div'); d.className = 'chip' + (activeModel === m ? ' active' : ''); d.textContent = 'Model ' + m; d.onclick = () => setModel(m, d); mc.appendChild(d); });
+      updateColorChips();
     }
 
-    function setFilter(v, el) {
-      activeFilter = v;
-      document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
-      el.classList.add('active');
-      renderGrid();
+    function updateColorChips() {
+      const cc = document.getElementById('colorChips'), sep = document.getElementById('colorSep');
+      const prods = activeModel === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.model === activeModel);
+      const colors = [...new Set(prods.map(p => p.color).filter(c => c && c !== ''))].sort();
+      if (!colors.length) { cc.style.display = 'none'; sep.style.display = 'none'; return; }
+      cc.style.display = 'flex'; sep.style.display = 'block';
+      cc.innerHTML = '<span class="filter-lbl">Color</span>';
+      const allC = document.createElement('div'); allC.className = 'chip' + (activeColor === 'all' ? ' active' : ''); allC.textContent = 'All'; allC.onclick = () => setColor('all', allC); cc.appendChild(allC);
+      colors.forEach(c => { const d = document.createElement('div'); d.className = 'chip' + (activeColor === c ? ' active' : ''); d.innerHTML = cDot(c, 8) + ' ' + c; d.onclick = () => setColor(c, d); cc.appendChild(d); });
     }
 
-    // ─── Search ───────────────────────────────────────────────────────────────────
-    document.getElementById('searchInput').addEventListener('input', function () {
-      searchQuery = this.value.trim().toLowerCase();
-      document.getElementById('searchClear').classList.toggle('vis', !!searchQuery);
-      renderGrid();
-    });
-    function clearSearch() {
-      document.getElementById('searchInput').value = '';
-      searchQuery = '';
-      document.getElementById('searchClear').classList.remove('vis');
-      renderGrid();
-    }
+    function setModel(v, el) { activeModel = v; activeColor = 'all'; document.querySelectorAll('#modelChips .chip').forEach(c => c.classList.remove('active')); el.classList.add('active'); updateColorChips(); render(); }
+    function setColor(v, el) { activeColor = v; document.querySelectorAll('#colorChips .chip').forEach(c => c.classList.remove('active')); el.classList.add('active'); render(); }
+    function setStock(v, el) { activeStock = v; document.querySelectorAll('#stockChips .chip').forEach(c => c.classList.remove('active')); el.classList.add('active'); render(); }
+
+    document.getElementById('searchInput').addEventListener('input', function () { searchQuery = this.value.trim().toLowerCase(); document.getElementById('searchClear').classList.toggle('vis', !!searchQuery); render(); });
+    function clearSearch() { document.getElementById('searchInput').value = ''; searchQuery = ''; document.getElementById('searchClear').classList.remove('vis'); render(); }
 
     function filtered() {
-      return PRODUCTS.filter(p => {
-        // Skip legend/note rows
+      let prods = PRODUCTS.filter(p => {
         if (!p.sku || p.sku.toUpperCase().includes('LEGEND') || p.sku.length > 60) return false;
-        if (activeFilter === 'In Stock' && p.stockInHand <= 0) return false;
-        if (activeFilter === 'Out of Stock' && p.stockInHand > 0) return false;
-        if (activeFilter !== 'all' && activeFilter !== 'In Stock' && activeFilter !== 'Out of Stock' && p.model !== activeFilter) return false;
-        if (searchQuery) {
-          const hay = [p.sku, p.productName, p.color, p.model, p.manufacturer, p.notes, p.owdId].join(' ').toLowerCase();
-          if (!hay.includes(searchQuery)) return false;
-        }
+        if (activeModel !== 'all' && p.model !== activeModel) return false;
+        if (activeColor !== 'all' && (p.color || '').toLowerCase() !== activeColor.toLowerCase()) return false;
+        if (activeStock === 'in' && p.stockInHand <= 0) return false;
+        if (activeStock === 'out' && p.stockInHand > 0) return false;
+        if (searchQuery) { const hay = [p.sku, p.productName, p.color, p.model, p.manufacturer, p.notes, p.owdId].join(' ').toLowerCase(); if (!hay.includes(searchQuery)) return false; }
         return true;
       });
+      if (sortCol) { prods = [...prods].sort((a, b) => { const av = a[sortCol] ?? '', bv = b[sortCol] ?? ''; if (typeof av === 'number') return (av - bv) * sortDir; return String(av).localeCompare(String(bv)) * sortDir; }); }
+      return prods;
     }
 
-    // ─── Render ───────────────────────────────────────────────────────────────────
-    function renderGrid() {
-      const prods = filtered();
-      document.getElementById('visibleCount').textContent = prods.length;
-      document.getElementById('totalCount').textContent = PRODUCTS.length;
-      const grid = document.getElementById('productsGrid');
-      grid.innerHTML = '';
+    function setView(v) { currentView = v; document.getElementById('gridSection').style.display = v === 'grid' ? 'block' : 'none'; document.getElementById('tableSection').style.display = v === 'table' ? 'block' : 'none'; document.getElementById('gridViewBtn').classList.toggle('active', v === 'grid'); document.getElementById('tableViewBtn').classList.toggle('active', v === 'table'); render(); }
 
-      if (!prods.length) {
-        grid.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><div class="empty-title">No products found</div><p>Try a different search or filter</p></div>`;
-        return;
-      }
+    function sortTable(col) { if (sortCol === col) sortDir *= -1; else { sortCol = col; sortDir = 1; } document.querySelectorAll('thead th').forEach(th => th.classList.remove('sorted')); const cols = ['sku', 'productName', 'color', 'model', 'stockInHand', 'inventoryStock', 'deliveries', 'notes', '']; const idx = cols.indexOf(col); if (idx >= 0 && document.querySelectorAll('thead th')[idx]) document.querySelectorAll('thead th')[idx].classList.add('sorted'); render(); }
 
+    function render() { const prods = filtered(); document.getElementById('visibleCount').textContent = prods.length; document.getElementById('totalCount').textContent = PRODUCTS.length; if (currentView === 'grid') renderGrid(prods); else renderTable(prods); }
+
+    function renderGrid(prods) {
+      const grid = document.getElementById('productsGrid'); grid.innerHTML = '';
+      if (!prods.length) { grid.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div><div class="empty-title">No products found</div><p>Try a different filter</p></div>'; return; }
       prods.forEach((p, i) => {
-        const card = document.createElement('div');
-        card.className = 'product-card';
-        card.style.animationDelay = Math.min(i * .04, .5) + 's';
-        const stock = p.stockInHand;
-        const barPct = Math.min(100, (stock / 200) * 100);
-        const delivKeys = Object.keys(p.deliveries || {}).slice(0, 4);
-        const delivHTML = delivKeys.length
-          ? delivKeys.map(k => `<div class="delivery-chip"><span class="delivery-month">${k}</span><span class="delivery-qty">${p.deliveries[k]}</span></div>`).join('')
-          : '<span class="no-delivery">No upcoming deliveries</span>';
-        const imgHTML = p.imageUrl ? `<img src="${p.imageUrl}" alt="${p.sku}" onerror="this.parentNode.innerHTML='🪑'">` : '🪑';
+        const card = document.createElement('div'); card.className = 'product-card'; card.style.animationDelay = Math.min(i * .04, .5) + 's';
+        const st = p.stockInHand, bp = Math.min(100, (st / 200) * 100);
+        const dk = Object.keys(p.deliveries || {}).slice(0, 3);
 
-        card.innerHTML = `
-      <div class="card-header">
-        <div class="card-image">${imgHTML}</div>
-        <div class="card-info">
-          <div class="card-sku">${p.sku}</div>
-          <div class="card-name">${p.productName || 'Product ' + p.sku}</div>
-          <div class="card-meta">
-            ${p.color ? `<div class="color-badge">${colorDot(p.color)}<span>${p.color}</span></div>` : ''}
-            ${p.model && p.model !== 'nan' ? `<div class="model-badge">Model ${p.model}</div>` : ''}
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="stock-row">
-          <div>
-            <div class="stock-label">Stock In Hand</div>
-            <div class="stock-bar-wrap"><div class="stock-bar" style="width:${barPct}%;background:${stockColor(stock)}"></div></div>
-          </div>
-          <div class="stock-value ${stockCls(stock)}">${stock}</div>
-        </div>
-        <div class="deliveries-preview">${delivHTML}</div>
-      </div>`;
-        card.onclick = () => openModal(p);
-        grid.appendChild(card);
+        const dh = dk.length ? dk.map(k => `<div class="delivery-chip"><span class="delivery-month">${k}</span><span class="delivery-qty">${p.deliveries[k]}</span></div>`).join('') : '<span class="no-delivery">No upcoming deliveries</span>';
+        const nh = p.notes ? `<div class="card-note">📝 ${p.notes}</div>` : '';
+        const ih = p.imageUrl ? `<img src="${p.imageUrl}" alt="${p.sku}" onerror="this.parentNode.innerHTML='🪑'">` : '🪑';
+        card.innerHTML = `<div class="card-header"><div class="card-image">${ih}</div><div class="card-info"><div class="card-sku">${p.sku}</div><div class="card-name">${p.productName || 'Product ' + p.sku}</div><div class="card-meta">${p.color ? `<div class="color-badge">${cDot(p.color)}<span style="margin-left:3px">${p.color}</span></div>` : ''} ${p.model && p.model !== 'nan' ? `<div class="model-badge">Model ${p.model}</div>` : ''}</div></div></div><div class="card-body"><div class="stock-row"><div><div class="stock-label">Stock In Hand</div><div class="stock-bar-wrap"><div class="stock-bar" style="width:${bp}%;background:${sColor(st)}"></div></div></div><div class="stock-value ${sCls(st)}">${st}</div></div><div class="deliveries-preview">${dh}</div>${nh}</div>`;
+        card.onclick = () => openModal(p); grid.appendChild(card);
       });
     }
 
-    // ─── Modal ────────────────────────────────────────────────────────────────────
+    function renderTable(prods) {
+      const tb = document.getElementById('tableBody'); tb.innerHTML = '';
+      if (!prods.length) { tb.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:60px;color:var(--text3)">No products found</td></tr>'; return; }
+      prods.forEach((p, i) => {
+        const tr = document.createElement('tr'); tr.style.animationDelay = Math.min(i * .02, .3) + 's';
+        const st = p.stockInHand, inv = p.inventoryStock ?? st;
+        const dk = Object.keys(p.deliveries || {}).slice(0, 2);
+        const dh = dk.map(k => `<span class="tbl-del-chip">${k}: ${p.deliveries[k]}</span>`).join('');
+        const sku_safe = p.sku.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+        tr.innerHTML = `<td class="sku-cell">${p.sku}</td><td class="name-cell"><span class="pname">${p.productName || '—'}</span></td><td><div class="tbl-color">${cDot(p.color || '')} ${p.color || '—'}</div></td><td style="color:var(--text2);font-weight:600">${p.model && p.model !== 'nan' ? p.model : '—'}</td><td class="stock-cell ${sCls(st)}">${st}</td><td><div class="tbl-deliveries">${dh || '<span style="color:var(--text3);font-size:10px">—</span>'}</div></td><td><span class="tbl-note" title="${p.notes || ''}">${p.notes || '—'}</span></td><td><button class="view-detail-btn" onclick="event.stopPropagation();openModalBySku('${sku_safe}')">View Details</button></td>`;
+        tr.onclick = () => openModal(p); tb.appendChild(tr);
+      });
+    }
+
+    function openModalBySku(sku) { const p = PRODUCTS.find(x => x.sku === sku); if (p) openModal(p); }
+
     function openModal(p) {
+      if (!p) return;
       document.getElementById('mSku').textContent = p.sku;
       document.getElementById('mName').textContent = p.productName || 'Product ' + p.sku;
-      const tagsEl = document.getElementById('mTags'); tagsEl.innerHTML = '';
-      if (p.model && p.model !== 'nan') tagsEl.innerHTML += `<span class="tag tag-model">Model ${p.model}</span>`;
-      if (p.color) tagsEl.innerHTML += `<span class="tag tag-color">${colorDot(p.color)} ${p.color}</span>`;
-      if (p.manufacturer) tagsEl.innerHTML += `<span class="tag tag-mfr">${p.manufacturer}</span>`;
-
-      const stock = p.stockInHand, inv = p.inventoryStock ?? stock;
-      const delivEntries = Object.entries(p.deliveries || {});
-
-      let body = `<div class="info-grid">
-    <div class="info-card"><div class="info-card-label">Stock In Hand</div><div class="info-card-value ${stockCls(stock)}">${stock}</div><div class="info-card-sub">Units available</div></div>
-    <div class="info-card"><div class="info-card-label">Inventory On Hand</div><div class="info-card-value ${stockCls(inv)}">${inv}</div><div class="info-card-sub">From inventory sheet</div></div>
-  </div>`;
-
-      if (delivEntries.length) {
-        body += `<div class="section-title">Scheduled Deliveries</div><div class="deliveries-grid">
-      ${delivEntries.map(([m, q], idx) => `<div class="delivery-card" style="animation-delay:${idx * .05}s"><div class="delivery-card-month">${m}</div><div class="delivery-card-qty">${q}</div></div>`).join('')}
-    </div>`;
-      }
-
-      const details = [
-        ['OWD ID', p.owdId || '—'],
-        ['Sheet', p.sheetName || '—'],
-        ['Source File', p.sourceFile || '—'],
-        ['Product URL', p.productUrl ? `<a href="${p.productUrl}" target="_blank">View Product ↗</a>` : '—'],
-        ['Upcoming', p.upcoming || '—'],
-      ];
-      body += `<div class="section-title">Details</div><div class="details-list">
-    ${details.map(([k, v]) => `<div class="detail-row"><span class="detail-key">${k}</span><span class="detail-val">${v}</span></div>`).join('')}
-  </div>`;
-
-      if (p.notes) body += `<div class="section-title">Notes</div><div class="notes-box">💡 ${p.notes}</div>`;
-
+      const te = document.getElementById('mTags'); te.innerHTML = '';
+      if (p.model && p.model !== 'nan') te.innerHTML += `<span class="tag tag-model">Model ${p.model}</span>`;
+      if (p.color) te.innerHTML += `<span class="tag tag-color">${cDot(p.color)} ${p.color}</span>`;
+      if (p.manufacturer) te.innerHTML += `<span class="tag tag-mfr">${p.manufacturer}</span>`;
+      const st = p.stockInHand, inv = p.inventoryStock ?? st, de = Object.entries(p.deliveries || {});
+      const nid = 'nt_' + Date.now(), bid = 'nb_' + Date.now(), sid = 'ns_' + Date.now();
+      let body = `<div class="info-grid"><div class="info-card"><div class="info-card-label">Stock In Hand</div><div class="info-card-value ${sCls(st)}">${st}</div><div class="info-card-sub">Units available</div></div><div class="info-card"><div class="info-card-label">Inventory On Hand</div><div class="info-card-value ${sCls(inv)}">${inv}</div><div class="info-card-sub">From inventory sheet</div></div></div>`;
+      if (de.length) body += `<div class="section-title">Scheduled Deliveries</div><div class="deliveries-grid">${de.map(([m, q], i) => `<div class="delivery-card" style="animation-delay:${i * .05}s"><div class="delivery-card-month">${m}</div><div class="delivery-card-qty">${q}</div></div>`).join('')}</div>`;
+      const dets = [['OWD ID', p.owdId || '—'], ['Sheet', p.sheetName || '—'], ['Source File', p.sourceFile || '—'], ['Product URL', p.productUrl ? `<a href="${p.productUrl}" target="_blank">View Product ↗</a>` : '—'], ['Upcoming', p.upcoming || '—']];
+      body += `<div class="section-title">Details</div><div class="details-list">${dets.map(([k, v]) => `<div class="detail-row"><span class="detail-key">${k}</span><span class="detail-val">${v}</span></div>`).join('')}</div>`;
+      const sku_js = p.sku.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+      body += `<div class="section-title">Notes</div><div class="note-editor"><textarea class="note-textarea" id="${nid}" placeholder="Add or edit note…">${(p.notes || '').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</textarea><div class="note-actions"><button class="btn-save-note" id="${bid}" onclick="saveNote('${sku_js}',document.getElementById('${nid}').value,document.getElementById('${bid}'),document.getElementById('${sid}'))">💾 Save to Sheet</button><span class="note-status" id="${sid}">${apiUrl ? '' : 'Connect API to enable saving'}</span></div></div>`;
       document.getElementById('modalBody').innerHTML = body;
       document.getElementById('modalOverlay').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
+
     function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow = ''; }
     function closeModalOnBg(e) { if (e.target === document.getElementById('modalOverlay')) closeModal(); }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-    // ─── Toast ────────────────────────────────────────────────────────────────────
     let toastTimer;
-    function showToast(msg) {
-      const t = document.getElementById('toast');
-      t.textContent = msg; t.classList.add('show');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
-    }
-
-    // ─── Init ─────────────────────────────────────────────────────────────────────
-    loadData();
+    function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 3500); }
+    setView('table');
+    loadData(true);
   </script>
 </body>
 
