@@ -1323,7 +1323,7 @@
   <div class="toast" id="toast"></div>
 
   <script>
-    let PRODUCTS = [], INVENTORY = {}, activeModel = 'all', activeColor = 'all', activeStock = 'all', searchQuery = '', currentView = 'grid', sortCol = null, sortDir = 1, autoRefreshTimer = null, apiUrl = localStorage.getItem('stockview_api_url') || '';
+    let PRODUCTS = [], INVENTORY = {}, activeModel = 'all', activeColor = 'all', activeStock = 'all', searchQuery = '', currentView = 'grid', sortCol = null, sortDir = 1, autoRefreshTimer = null, apiUrl = localStorage.getItem('stockview_api_url') || 'https://script.google.com/macros/s/AKfycbxCSrdIlnIAUvQehP8Ufcred1RVCQzW4kE10z_2zmI6w1rcAtP8BSK2pp8CjTneiHdg/exec';
 
     const FALLBACK_PRODUCTS = [
       { "sku": "N4-057-BLK", "stockInHand": 120, "inventoryStock": 120, "model": "57", "color": "Black", "productName": "Hydraulic Saddle Rolling Ergonomic Medical Stool", "manufacturer": "Sit2Health-Bo", "imageUrl": "", "productUrl": "https://www.sithealthier.com", "notes": "standard chair", "owdId": "811585.0", "upcoming": "", "deliveries": { "Jan-26": "135(5)", "Sept-25": "60.0", "Jul-25": "56.0" }, "sheetName": "057 - Black", "sourceFile": "057.xlsx" },
